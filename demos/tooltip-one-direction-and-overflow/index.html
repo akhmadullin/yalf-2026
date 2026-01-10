@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Демо тултипа с его показом за пределами вьюпорта</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        :root {
+            --placeholer-background: lightgray;
+            --border-radius-size: 6px;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+        }
+
+
+        div, button {
+            box-sizing: border-box;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+
+
+        .container {
+            margin: 0 auto;
+            min-height: 200vh;
+            padding: 20px;
+        }
+
+        .title-placeholder {
+            width: 80%;
+            height: 50px;
+            border-radius: var(--border-radius-size);
+            background-color: var(--placeholer-background);
+        }
+
+        .block-placeholder {
+            width: 100%;
+            height: 70px;
+            border-radius: var(--border-radius-size);
+            background-color: var(--placeholer-background);
+        }
+
+        .subtitle-placeholder {
+            width: 75%;
+            height: 30px;
+            border-radius: var(--border-radius-size);
+            background-color: var(--placeholer-background);
+        }
+
+        .cards {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .card-placeholder {
+            flex: 1 1 40%;
+            height: 60px;
+            border-radius: var(--border-radius-size);
+            background-color: var(--placeholer-background);
+        }
+
+        .info-button {
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .info-button-icon {
+            background-color: rgb(28, 132, 192);
+            mask-image: url(./assets/info.svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: 34px;
+            display: inline-block;
+            position: absolute;
+            inset: -2px;
+        }
+
+        .subtitle-button-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tooltip-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .tooltip {
+            position: absolute;
+            min-width: 190px;
+            max-width: calc(100% - 40px);
+            background-color: rgb(28, 132, 192);
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px 8px;
+            border-radius: var(--border-radius-size);
+            opacity: 0;
+            transition: opacity .3s;
+            bottom: 125%;
+            right: -10px;
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgb(28, 132, 192) transparent transparent transparent;
+            right: 20px;
+            bottom: -9px;
+        }
+
+        .tooltip-visible {
+            opacity: 1;
+        }
+    </style>
+    <div class="container">
+        <div class="title-placeholder mb-20"></div>
+        <div class="block-placeholder mb-20"></div>
+        <div class="subtitle-placeholder mb-20"></div>
+        <div class="cards mb-20">
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+        </div>
+        <div class="subtitle-button-wrapper mb-20">
+            <div class="subtitle-placeholder"></div>
+            <div class="tooltip-wrapper" >
+                <button class="info-button" id="info-button">
+                    <span class="info-button-icon"></span>
+                </button>
+                <div class="tooltip" id="tooltip">Не адаптируюсь под положение скрола 😢</div>
+            </div>
+        </div>
+        <div class="block-placeholder mb-20"></div>
+        <div class="subtitle-placeholder mb-20"></div>
+        <div class="cards mb-20">
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+            <div class="card-placeholder"></div>
+        </div>
+        <div class="subtitle-placeholder mb-20"></div>
+        <div class="block-placeholder mb-20"></div>
+    </div>
+    <script>
+        const infoButton = document.querySelector('#info-button');
+        const tooltip = document.querySelector('#tooltip');
+
+        if (infoButton && tooltip) {
+            infoButton.addEventListener('click', (event) => {
+                tooltip.classList.toggle('tooltip-visible');
+            });
+        }
+    </script>
+</body>
+</html>

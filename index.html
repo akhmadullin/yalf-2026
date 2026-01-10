@@ -105,15 +105,15 @@
             color: white;
         }
         
-        /* .without-margins {
+        .without-margins {
             margin: 0;
-        } */
+        }
 
-        /* .muted {
+        .muted {
             opacity: 0.4;
         }
 
-        .invisible {
+        /* .invisible {
             opacity: 0;
         } */
 
@@ -213,10 +213,10 @@
             padding: 8px;
         }
 
-        /* .iframe {
+        .iframe {
             width: 100%;
             height: 100%;
-        } */
+        }
 
         /* .place.my-quote {
             width: 60%;
@@ -288,6 +288,15 @@
         .centered-text {
             text-align: center;
         }
+
+        .demo-iframe-mobile {
+            display: block;
+            width: 35%;
+            height: 90%;
+            border: 6px solid white;
+            border-radius: 30px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 
@@ -317,6 +326,242 @@
                 <li>живу во Владивостоке</li>
             </ul>
         </div>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Адаптивный интерфейс</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Responsive Web Design</h2>
+    </section>
+
+    <section class="slide">
+        <img src="./images/responsive-design-screens.svg" alt="" class="place" style="width: 80%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">✌🏻 Две проблемы</h2>
+    </section>
+
+    <section class="slide">
+        <img src="./images/responsive-design-screens.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/responsive-design-screens.svg" alt="" class="place" style="width: 80%;">
+        <img src="./images/arrow-semi-screen-sizes.svg" alt="" class="place" style="width: 37%; top: 22%; left: 60%;">
+    </section>
+
+    <section class="slide">
+        тут еще пара слайдов про первую проблему
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Брейкпоинты</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title" style="text-decoration: line-through;">Брейкпоинты</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Компоненты</h2>
+    </section>
+
+    <section class="slide">
+        <img src="./images/screenshot-components.jpg" alt="" class="place rounded" style="height:80%;">
+    </section>
+
+    <section class="slide">
+        <img src="./images/components-as-bricks.svg" alt="" class="place" style="width: 80%;">
+    </section>
+
+    <section class="slide">
+        <img src="./images/component-can-be-used-in-different-screens.svg" alt="" class="place" style="height: 70%; margin-top: -3%;">
+    </section>
+
+    <!-- <section class="slide">
+        <h2 class="place centered-slide-title" style="line-height: 1.2;">Компонент должен выглядеть хорошо везде</h2>
+    </section> -->
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Адаптив – не только про вьюпорт?</h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/adaptive-to-content-one-card/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/adaptive-to-content-broken/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-1.svg" alt="" class="place" style="width: 8%;">
+        <img src="./images/drake-foo.png" alt="" class="place" style="width: 8%; top: 40%;">
+    </section>
+    <section class="slide">
+        <iframe src="./demos/adaptive-to-content/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-1.svg" alt="" class="place" style="width: 8%;">
+        <img src="./images/drake-cool.png" alt="" class="place" style="width: 8%; top: 40%;">
+    </section>
+
+    <section class="slide">
+        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <ul>
+            <li class="muted">вьюпорт</li>
+            <li>контент</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/card-desktop-mobile/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css" style="font-size: 0.8em; line-height: 1.3;">
+                .card {
+                    display: flex;
+
+                    .image {
+                        width: 150px;
+                        height: 100%;
+                    }
+                }
+
+                @media (width <= 375px) {
+                    .card {
+                        flex-direction: column;
+
+                        .image {
+                            width: 100%;
+                            height: 100px;
+                        }
+                    }
+                }
+            </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css" style="font-size: 0.8em; line-height: 1.3;">
+                .card {
+                    display: flex;
+
+                    .image {
+                        width: 150px;
+                        height: 100%;
+                    }
+                }
+
+                @media (width <= 375px) {
+                    .card {
+                        flex-direction: column;
+
+                        .image {
+                            width: 100%;
+                            height: 100px;
+                        }
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-styles-for-desktop.svg" alt="" class="place t l" style="width: 26%; top: 15%; left: 8%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css" style="font-size: 0.8em; line-height: 1.3;">
+                .card {
+                    display: flex;
+
+                    .image {
+                        width: 150px;
+                        height: 100%;
+                    }
+                }
+
+                @media (width <= 375px) {
+                    .card {
+                        flex-direction: column;
+
+                        .image {
+                            width: 100%;
+                            height: 100px;
+                        }
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-styles-for-desktop.svg" alt="" class="place t l" style="width: 26%; top: 15%; left: 8%;">
+        <img src="./images/arrow-adapt-for-mobile.svg" alt="" class="place t l" style="width: 31%; top: 58%; left: 9%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/card-desktop-mobile-2/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/card-desktop-mobile-2/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-wide-and-thin.svg" alt="" class="place t" style="width: 27%; left: 74%; top: 4%;">
+    </section>
+    <section class="slide">
+        <iframe src="./demos/card-desktop-mobile-2-1/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/viewport-is-not-important.svg" alt="" class="place t" style="width: 36%; top: 1%; left: 71%;">
+    </section>
+    <section class="slide">
+        <iframe src="./demos/card-desktop-mobile-3/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/container-size-is-important-2.svg" alt="" class="place t" style="width: 35%; top: 3%; left: 68%;">
+    </section>
+
+    <section class="slide">
+        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <ul>
+            <li class="muted">вьюпорт</li>
+            <li class="muted">контент</li>
+            <li>размеры контейнера</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/tooltip-one-direction-and-overflow/index.html" class="demo-iframe-mobile"></iframe>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-adaptive-tooltip.svg" alt="" class="place" style="width: 70%;">
+    </section>
+
+    <section class="slide">
+        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <ul>
+            <li class="muted">вьюпорт</li>
+            <li class="muted">контент</li>
+            <li class="muted">размеры контейнера</li>
+            <li>окружающую среду</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <div style="display: flex; width: 100%; height: 100%;">
+            <iframe src="./demos/user-preferences/index.html" class="demo-iframe-mobile" style="border-color: #c3b587;"></iframe>
+            <iframe src="./demos/user-preferences-2/index.html" class="demo-iframe-mobile" style="border-color: #c3b587;"></iframe>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <ul>
+            <li class="muted">вьюпорт</li>
+            <li class="muted">контент</li>
+            <li class="muted">размеры контейнера</li>
+            <li class="muted">окружающую среду</li>
+            <li>предпочтения пользователя</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <ul>
+            <li>вьюпорт</li>
+            <li>контент</li>
+            <li>размеры контейнера</li>
+            <li>окружающую среду</li>
+            <li>предпочтения пользователя</li>
+        </ul>
     </section>
 
     <section class="slide">
