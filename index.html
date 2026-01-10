@@ -245,7 +245,7 @@
             font-size: 0.9em;
         }
 
-        /* .browser-support-row {
+        .browser-support-row {
             display: flex;
             gap: 20px;
             font-weight: bold;
@@ -260,7 +260,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        } */
+        }
 
         /* .slide.slide-with-table {
             padding: 50px 40px 0 80px;
@@ -635,6 +635,24 @@
     </section>
 
     <section class="slide">
+        <div class="browser-support-row">
+            <div class="browser-support-row__item">
+                <div>Chrome</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Firefox</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Safari</div>
+                <div>✅</div>
+            </div>
+        </div>
+        <a href="https://caniuse.com/css-container-queries" class="copyright">Can I use: Container Queries</a>
+    </section>
+
+    <section class="slide">
         <img src="./images/scheme-media-vs-container-1.svg" alt="" class="place" style="width: 80%;">
     </section>
     <section class="slide">
@@ -655,36 +673,156 @@
     </section>
 
     <section class="slide">
-        <pre class="place">
+        <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
                 .container {
-                    container-type: size;
+                    container-type: inline-size;
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-define-container.svg" alt="" class="place" style="width: 25%; left: 20%; top: 20%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-define-container.svg" alt="" class="place" style="width: 25%; left: 20%; top: 20%;">
+        <img src="./images/arrow-default-styles.svg" alt="" class="place" style="width: 31%; left: 77%; top: 43%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
                 }
 
                 @container (width <= 200px) {
                     .element {
-                        ...
+                        color: green;
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-define-container.svg" alt="" class="place" style="width: 25%; left: 20%; top: 20%;">
+        <img src="./images/arrow-default-styles.svg" alt="" class="place" style="width: 31%; left: 77%; top: 43%;">
+        <img src="./images/arrow-custom-styles.svg" alt="" class="place" style="width: 26%; left: 20%; top: 71%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container-name: card;
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+
+                @container card (width <= 200px) {
+                    .element {
+                        color: green;
                     }
                 }
             </code>
         </pre>
     </section>
-
     <section class="slide">
-        <pre class="place">
+        <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
                 .container {
                     container-name: card;
-                    container-type: size;
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
                 }
 
                 @container card (width <= 200px) {
                     .element {
-                        ...
+                        color: green;
                     }
                 }
             </code>
         </pre>
+        <img src="./images/arrow-can-define-name-to-container.svg" alt="" class="place t r" style="width: 22%; top: 2%; right: 9%;">
+    </section>
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container-name: card;
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+
+                @container card (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-can-define-name-to-container.svg" alt="" class="place t r" style="width: 22%; top: 2%; right: 9%;">
+        <img src="./images/arrow-link-to-name.svg" alt="" class="place t r" style="width: 31%; top: 44%; right: 14%;">
+    </section>
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container: card / inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+
+                @container card (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
+                }
+            </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container: card / inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+
+                @container card (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-container-shortcat.svg" alt="" class="place" style="width: 33%; left: 22%; top: 26%;">
     </section>
 
     <section class="slide">
@@ -701,6 +839,10 @@
 
     <section class="slide">
         <h2 class="place centered-slide-title"><code>:has()</code></h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Адаптивная типографика</h2>
     </section>
 
     <section class="slide">
