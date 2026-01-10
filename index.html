@@ -612,7 +612,7 @@
 
     <section class="slide">
         <!-- <h2 class="place centered-slide-title">💅🏼 Что там по новшествам в CSS?</h2> -->
-        <h2 class="place centered-slide-title">💅🏼 Чем порадует современный CSS?</h2>
+        <h2 class="place centered-slide-title">💅🏼 Чем порадует CSS?</h2>
     </section>
 
     <section class="slide">
@@ -635,11 +635,72 @@
     </section>
 
     <section class="slide">
+        <img src="./images/scheme-media-vs-container-1.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-media-vs-container-2.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-media-vs-container-3.svg" alt="" class="place" style="width: 80%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css">
+            &lt;div class="container"&gt;
+                &lt;div class="element"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css">
+                .container {
+                    container-type: size;
+                }
+
+                @container (width <= 200px) {
+                    .element {
+                        ...
+                    }
+                }
+            </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css">
+                .container {
+                    container-name: card;
+                    container-type: size;
+                }
+
+                @container card (width <= 200px) {
+                    .element {
+                        ...
+                    }
+                }
+            </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        слайд про значения container-type
+    </section>
+
+    <section class="slide">
+        демка
+    </section>
+
+    <section class="slide">
         <h2 class="place centered-slide-title">Style queries</h2>
     </section>
 
     <section class="slide">
-        <h2 class="place centered-slide-title">:has()</h2>
+        <h2 class="place centered-slide-title"><code>:has()</code></h2>
     </section>
 
     <section class="slide">
