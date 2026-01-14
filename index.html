@@ -671,7 +671,6 @@
             </code>
         </pre>
     </section>
-
     <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
@@ -682,7 +681,6 @@
         </pre>
         <img src="./images/arrow-define-container.svg" alt="" class="place" style="width: 25%; left: 20%; top: 20%;">
     </section>
-
     <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
@@ -698,7 +696,6 @@
         <img src="./images/arrow-define-container.svg" alt="" class="place" style="width: 25%; left: 20%; top: 20%;">
         <img src="./images/arrow-default-styles.svg" alt="" class="place" style="width: 31%; left: 77%; top: 43%;">
     </section>
-
     <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
@@ -720,6 +717,25 @@
         <img src="./images/arrow-define-container.svg" alt="" class="place" style="width: 25%; left: 20%; top: 20%;">
         <img src="./images/arrow-default-styles.svg" alt="" class="place" style="width: 31%; left: 77%; top: 43%;">
         <img src="./images/arrow-custom-styles.svg" alt="" class="place" style="width: 26%; left: 20%; top: 71%;">
+    </section>
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+
+                @container (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
+                }
+            </code>
+        </pre>
     </section>
 
     <section class="slide">
@@ -789,6 +805,8 @@
         <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
                 .container {
+                    container-name: card;
+                    container-type: inline-size;
                     container: card / inline-size;
                 }
 
@@ -808,6 +826,8 @@
         <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
                 .container {
+                    container-name: card;
+                    container-type: inline-size;
                     container: card / inline-size;
                 }
 
@@ -822,15 +842,172 @@
                 }
             </code>
         </pre>
-        <img src="./images/arrow-container-shortcat.svg" alt="" class="place" style="width: 33%; left: 22%; top: 26%;">
+        <img src="./images/arrow-container-shortcat.svg" alt="" class="place" style="width: 33%; left: 22%; top: 38%;">
     </section>
 
     <section class="slide">
-        слайд про значения container-type
+        <h3><code>container-type</code></h3>
+        <ul>
+            <li><code>normal</code> – дефолтное значение</li>
+            <li><code>inline-size</code> – следим за <i>inline</i> осью</li>
+            <li><code>size</code> – следим за <i>inline</i> и <i>block</i> осями</li>
+        </ul>
     </section>
 
     <section class="slide">
-        демка
+        <pre class="place l t" style="top: 80px;">
+        <code class="language-css">
+        @container (width <= 300px) {
+            .element {
+                color: yellow;
+            }
+        }
+        
+        @container (height <= 150px) {
+            .element {
+                font-style: italic;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-type/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Почему так происходит?</h2>
+    </section>
+
+    <section class="slide">
+        <h3><code>container-type</code></h3>
+        <ul>
+            <li><code>normal</code> – дефолтное значение</li>
+            <li><code>inline-size</code> – следим за <i>inline</i> осью</li>
+            <li><code>size</code> – следим за <i>inline</i> и <i>block</i> осями</li>
+        </ul>
+    </section>
+
+    <section class="slide" style="padding-right: 20px;">
+        <h3><code>container-type</code></h3>
+        <ul>
+            <li><code>normal</code> – дефолтное значение</li>
+            <li><code>inline-size</code> – применяет layout, style и <i>inline-size containment</i></li>
+            <li><code>size</code> – применяет layout, style и <i>size containment</i></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">🤔 Что за containment?</h2>
+    </section>
+
+    <section class="slide">
+        <div class="place my-quote" style="width:66%;">
+            <div class="my-quote__title">
+                Containment
+            </div>
+            <figure>
+                <blockquote>
+                    <p>Делает элемент и его содержимое независимыми от остального документа, позволяя браузеру оптимизировать отрисовку страницы.</p>
+                </blockquote>
+                <figcaption>CSS-спецификация</figcaption>
+            </figure>
+        </div>
+        <a href="https://drafts.csswg.org/css-contain-2/#contain-property" class="copyright">CSS-спецификация: Containment</a>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-container-grows-1.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-container-grows-2.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-container-grows-3.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-container-grows-4.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-container-grows-5.svg" alt="" class="place" style="width: 80%;">
+    </section>
+
+    <section class="slide">
+        <img src="./images/slpc-pipeline.svg" alt="" class="place" style="width: 80%;">
+        <a href="https://web.dev/articles/rendering-performance" class="copyright">Rendering pipeline</a>
+    </section>
+
+    <section class="slide">
+        <img src="./images/sheme-dom-contain-1.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/sheme-dom-contain-2.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/sheme-dom-contain-2.svg" alt="" class="place" style="width: 80%;">
+        <img src="./images/arrow-contain-and-dom.svg" alt="" class="place t r" style="width: 34%; right: 1%; top: 15%;">
+    </section>
+
+    <section class="slide">
+        <img src="./images/article-about-contain.jpg" alt="" class="place rounded" style="width: 80%;">
+        <a href="https://www.smashingmagazine.com/2019/12/browsers-containment-css-contain-property/" class="copyright">Rachel Andrew: Статья про contain</a>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title" style="font-size: 44px;">Сontainment API 👉🏻 Container Queries</h2>
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: 80px;">
+        <code class="language-css">
+        @container (width <= 300px) {
+            .element {
+                color: yellow;
+            }
+        }
+        
+        @container (height <= 150px) {
+            .element {
+                font-style: italic;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-type-1/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: -10px;">
+        <code class="language-css">
+        body {
+            display: grid;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                color: yellow;
+            }
+        }
+        
+        @container (height <= 150px) {
+            .element {
+                font-style: italic;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-type-2/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
+    </section>
+
+    <section class="slide">
+        демка показывающая, что контейнер берет ширину именно content-box'а
+    </section>
+
+    <section class="slide">
+        <!-- не забыть показать, что size значение работает, как мы ожидаем, с фиксированной шириной, либо с гридами, флексами, аспект рэйтио -->
+        демка (реальный юзкейс с карточками какими-нибудь)
+    </section>
+
+    <section class="slide">
+        Слайд про container query units
     </section>
 
     <section class="slide">
@@ -846,7 +1023,11 @@
     </section>
 
     <section class="slide">
-        <h2 class="place centered-slide-title"><code>@media (prefers-*)</code></h2>
+        <h2 class="place centered-slide-title">Logical properties</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title"><code>@media (prefers-...)</code></h2>
     </section>
 
     <section class="slide">
