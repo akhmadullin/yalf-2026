@@ -998,8 +998,77 @@
     </section>
 
     <section class="slide">
-        демка показывающая, что контейнер берет ширину именно content-box'а
+        тут где-то надо что-то сказать про то, что гриды флексы и явно выставленные размеры решают проблему container-type: size
     </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Размеры контейнера</h2>
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: -10px;">
+        <code class="language-css">
+        .container {
+            container-type: inline-size;
+            border: 2px solid white;
+            padding: 20px;
+        }
+
+        .element {
+            background: green;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                background: yellow;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-width/index.html" frameborder="0" class="place r t iframe" style="width: 55%; top: 180px;"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Почему так происходит?</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title"><code>box-sizing</code></h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/box-model/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: -10px;">
+        <code class="language-css">
+        .container {
+            container-type: inline-size;
+            border: 2px solid white;
+            padding: 20px;
+        }
+
+        .element {
+            background: green;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                background: yellow;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-width-1/index.html" frameborder="0" class="place r t iframe" style="width: 55%; top: 120px;"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title" style="line-height: 1.4;">Размеры контейнера <br> === <br> Размерам content-box</h2>
+    </section>
+    <!-- <section class="slide">
+        <h2 class="place centered-slide-title">container size === content-box size</h2>
+    </section> -->
 
     <section class="slide">
         <!-- не забыть показать, что size значение работает, как мы ожидаем, с фиксированной шириной, либо с гридами, флексами, аспект рэйтио -->
@@ -1032,6 +1101,10 @@
 
     <section class="slide">
         <h2 class="place centered-slide-title">Anchor Positioning</h2>
+    </section>
+
+    <section class="slide">
+        // todo в конце было бы прикольно сделать демку, которы бы по максимуму бы использовала в себе все ранее описанные фичи
     </section>
 
     <section class="slide">
