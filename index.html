@@ -855,8 +855,13 @@
     </section>
 
     <section class="slide">
-        <pre class="place l t" style="top: 80px;">
-        <code class="language-css">
+        <pre class="place l t" style="top: 25px; left: 20px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .container {
+            display: inline-block;
+            border: 2px solid green;
+        }
+
         @container (width <= 300px) {
             .element {
                 color: yellow;
@@ -956,8 +961,26 @@
     </section>
 
     <section class="slide">
-        <pre class="place l t" style="top: 80px;">
-        <code class="language-css">
+        <img src="./images/scheme-infinite-resize-1.svg" alt="" class="place" style="height: 60%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-infinite-resize-2.svg" alt="" class="place" style="height: 60%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-infinite-resize-3.svg" alt="" class="place" style="height: 60%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-infinite-resize-4.svg" alt="" class="place" style="height: 60%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: 25px; left: 20px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .container {
+            display: inline-block;
+            border: 2px solid green;
+        }
+
         @container (width <= 300px) {
             .element {
                 color: yellow;
@@ -975,8 +998,103 @@
     </section>
 
     <section class="slide">
-        <pre class="place l t" style="top: -10px;">
-        <code class="language-css">
+        <h2 class="place centered-slide-title">Как сделать красиво?</h2>
+    </section>
+
+    <section class="slide">
+        <h3><code>container-type</code></h3>
+        <ul>
+            <li><code>inline-size</code> – контент не влияет на ширину</li>
+            <li><code>size</code> – контент не влияет на ширину и высоту</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h3><code>container-type</code></h3>
+        <ul>
+            <li><code>inline-size</code> – контент не влияет на ширину</li>
+            <li><code>size</code> – контент не влияет на ширину и высоту</li>
+        </ul>
+        <img src="./images/arrow-as-empty-at-all.svg" alt="" class="place t r" style="width: 32%; top: 13%; right: 12%;">
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-container-size.svg" alt="" class="place" style="width: 70%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: 25px; left: 20px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .container {
+            display: inline-block;
+            border: 2px solid green;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                color: yellow;
+            }
+        }
+        
+        @container (height <= 150px) {
+            .element {
+                font-style: italic;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-type-1/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
+    </section>
+    <section class="slide">
+        <pre class="place l t" style="top: 25px; left: 20px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .container {
+            display: block;
+            border: 2px solid green;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                color: yellow;
+            }
+        }
+        
+        @container (height <= 150px) {
+            .element {
+                font-style: italic;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-type-1-1/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
+    </section>
+    <section class="slide">
+        <pre class="place l t" style="top: 25px; left: 20px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .container {
+            display: block;
+            height: 160px;
+            border: 2px solid green;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                color: yellow;
+            }
+        }
+        
+        @container (height <= 150px) {
+            .element {
+                font-style: italic;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-type-1-2/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: 25px; left: 20px;">
+        <code class="language-css" style="font-size: 0.8em;">
         body {
             display: grid;
         }
@@ -998,11 +1116,7 @@
     </section>
 
     <section class="slide">
-        тут где-то надо что-то сказать про то, что гриды флексы и явно выставленные размеры решают проблему container-type: size
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Размеры контейнера</h2>
+        <h2 class="place centered-slide-title">📝 Ещё одна заметка про размер</h2>
     </section>
 
     <section class="slide">
