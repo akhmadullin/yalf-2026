@@ -1185,12 +1185,153 @@
     </section> -->
 
     <section class="slide">
-        <!-- не забыть показать, что size значение работает, как мы ожидаем, с фиксированной шириной, либо с гридами, флексами, аспект рэйтио -->
-        демка (реальный юзкейс с карточками какими-нибудь)
+        <img src="./images/card-prototype.svg" alt="" class="place" style="width: 80%;">
     </section>
 
     <section class="slide">
-        Слайд про container query units
+        <pre class="place">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            &lt;div class="card-content"&gt;
+                &lt;img src="pic.jpg" class="image"&gt;
+                &lt;div class="text-container"&gt;
+                    &lt;h3 class="title"&gt;&lt;/h3&gt;
+                    &lt;p class="text"&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 0.8em;">
+        .card {
+            container: card / inline-size;
+        }
+
+        .card-content {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        @container card (width <= 200px) {
+            .card-content {
+                flex-direction: column;
+                gap: 10px;
+                font-size: 18px;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/card-container-query-interactive/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/card-container-query/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/card-container-query-2/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/card-container-query-3/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">📐 Container query units</h2>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-container-query-units.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-container-query-units-2.svg" alt="" class="place" style="width: 80%;">
+    </section>
+
+    <section class="slide">
+        <h3 class="without-margins" style="margin-bottom: 5px;">Container query units</h3>
+        <ul>
+            <li>
+                <code>cqw</code> – 1% ширины контейнера
+            </li>
+            <li>
+                <code>cqh</code> – 1% высоты контейнера
+            </li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h3 class="without-margins" style="margin-bottom: 5px;">Container query units</h3>
+        <ul>
+            <li class="muted">
+                <code>cqw</code> – 1% ширины контейнера
+            </li>
+            <li class="muted">
+                <code>cqh</code> – 1% высоты контейнера
+            </li>
+            <li>
+                <code>cqi</code> – 1% inline размера контейнера
+            </li>
+            <li>
+                <code>cqb</code> – 1% block размера контейнера
+            </li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h3 class="without-margins" style="margin-bottom: 5px;">Container query units</h3>
+        <ul>
+            <li class="muted">
+                <code>cqw</code> – 1% ширины контейнера
+            </li>
+            <li class="muted">
+                <code>cqh</code> – 1% высоты контейнера
+            </li>
+            <li class="muted">
+                <code>cqi</code> – 1% inline размера контейнера
+            </li>
+            <li class="muted">
+                <code>cqb</code> – 1% block размера контейнера
+            </li>
+            <li>
+                <code>cqmin</code> – минимальное значение из <code>cqi</code> и <code>cqb</code>
+            </li>
+            <li>
+                <code>cqmax</code> – максимальное значение из <code>cqi</code> и <code>cqb</code>
+            </li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h3 class="without-margins" style="margin-bottom: 5px;">Container query units</h3>
+        <ul>
+            <li>
+                <code>cqw</code> – 1% ширины контейнера
+            </li>
+            <li>
+                <code>cqh</code> – 1% высоты контейнера
+            </li>
+            <li>
+                <code>cqi</code> – 1% inline размера контейнера
+            </li>
+            <li>
+                <code>cqb</code> – 1% block размера контейнера
+            </li>
+            <li>
+                <code>cqmin</code> – минимальное значение из <code>cqi</code> и <code>cqb</code>
+            </li>
+            <li>
+                <code>cqmax</code> – максимальное значение из <code>cqi</code> и <code>cqb</code>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <img src="./images/screenshot-ahmad-shadeed-cq-guide.jpg" alt="" class="place rounded" style="width: 80%;">
+        <a href="https://ishadeed.com/article/css-container-query-guide" class="copyright">Интерактивный гайд по Container Queires</a>
     </section>
 
     <section class="slide">
