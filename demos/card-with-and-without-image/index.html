@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Применяем has для стилизации карточки с картинкой и без</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            color: #000000;
+            font-size: 20px;
+            padding: 60px;
+        }
+
+        .layout {
+            display: flex;
+            gap: 60px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .card {
+            display: flex;
+            background-color: #ecf6ff;
+            border-radius: 9px;
+            overflow: hidden;
+            height: 150px;
+        }
+
+        .card:not(:has(.image)) {
+            border-left: 20px solid #357db4;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 20px;
+        }
+
+        .image {
+            width: 150px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+    </style>
+    <div class="layout">
+        <div class="card">
+            <div class="text-container">
+                <h3 class="title">Карточка без картинки</h3>
+                <p>Зато с красивым бордером слева</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/img.png" class="image">
+            <div class="text-container">
+                <h3 class="title">Карточка c картинкой</h3>
+                <p>Бордер прячем, картинку показываем</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>sibling selectors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            color: #ffffff;
+            font-size: 18px;
+            padding: 40px;
+        }
+
+        .layout {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid white;
+            border-radius: 16px;
+            padding: 20px;
+            padding-left: 60px;
+        }
+
+        hr {
+            height: 5px;
+            background: white;
+            border: white;
+            border-radius: 2px;
+        }
+
+        hr ~ p {
+            color: #92df71;
+        }
+
+        hr + p {
+            color: #fde270;
+        }
+    </style>
+    <div class="layout">
+        <p>Обычный параграф текста.</p>
+        <p>Ещё один.</p>
+
+        <hr />
+
+        <p>Параграф с жёлтым текстом.</p>
+        <p>Параграф зелёного текста.</p>
+        <p>Ещё зелёный.</p>
+    </div>
+</body>
+</html>

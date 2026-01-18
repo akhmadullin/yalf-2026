@@ -1676,6 +1676,499 @@
     </section>
 
     <section class="slide">
+        <div class="place my-quote" style="width:65%;">
+            <div class="my-quote__title">
+                <code>:has()</code>
+            </div>
+            <figure>
+                <blockquote>
+                    <p>Позволяет стилизовать родительский элемент при наличии конкретного дочернего элемента.</p>
+                </blockquote>
+                <figcaption>CSS-спецификация</figcaption>
+            </figure>
+        </div>
+        <a href="https://drafts.csswg.org/selectors/#relational" class="copyright">CSS-спецификация: :has()</a>
+    </section>
+
+    <section class="slide">
+        <div class="browser-support-row">
+            <div class="browser-support-row__item">
+                <div>Chrome</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Firefox</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Safari</div>
+                <div>✅</div>
+            </div>
+        </div>
+        <a href="https://caniuse.com/css-has" class="copyright">Can I use: :has()</a>
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 2%;">
+        <code class="language-css" style="font-size: 0.8em;">
+
+            .parent > hr {
+                height: 5px;
+            }
+
+
+            .parent hr ~ p {
+                color: green;
+            }
+            
+            
+            .parent hr + p {
+                color: yellow;
+            }
+        </code>
+        </pre>
+        <iframe src="./demos/sibling-selectors/index.html" frameborder="0" class="place r" style="width: 50%; height: 60%;"></iframe>
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 2%;">
+        <code class="language-css" style="font-size: 0.8em;">
+            /* hr непосредственно внутри parent */
+            .parent > hr {
+                height: 5px;
+            }
+
+
+            .parent hr ~ p {
+                color: green;
+            }
+            
+            
+            .parent hr + p {
+                color: yellow;
+            }
+        </code>
+        </pre>
+        <iframe src="./demos/sibling-selectors/index.html" frameborder="0" class="place r" style="width: 50%; height: 60%;"></iframe>
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 28%; left: 5%;">
+
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 46%; left: 57%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 2%;">
+        <code class="language-css" style="font-size: 0.8em;">
+            /* hr непосредственно внутри parent */
+            .parent > hr {
+                height: 5px;
+            }
+
+            /* все параграфы после hr */
+            .parent hr ~ p {
+                color: green;
+            }
+            
+
+            .parent hr + p {
+                color: yellow;
+            }
+        </code>
+        </pre>
+        <iframe src="./demos/sibling-selectors/index.html" frameborder="0" class="place r" style="width: 50%; height: 60%;"></iframe>
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 28%; left: 5%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 52%; left: 5%;">
+
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 46%; left: 57%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 64%; left: 57%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 2%;">
+        <code class="language-css" style="font-size: 0.8em;">
+            /* hr непосредственно внутри parent */
+            .parent > hr {
+                height: 5px;
+            }
+
+            /* все параграфы после hr */
+            .parent hr ~ p {
+                color: green;
+            }
+            
+            /* первый параграф после hr */
+            .parent hr + p {
+                color: yellow;
+            }
+        </code>
+        </pre>
+        <iframe src="./demos/sibling-selectors/index.html" frameborder="0" class="place r" style="width: 50%; height: 60%;"></iframe>
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 28%; left: 5%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 52%; left: 5%;">
+        <img src="./images/bullet-3.svg" alt="" class="place" style="width: 5%; top: 76%; left: 5%;">
+
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 46%; left: 57%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 64%; left: 57%;">
+        <img src="./images/bullet-3.svg" alt="" class="place" style="width: 5%; top: 55%; left: 57%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 2%;">
+        <code class="language-css" style="font-size: 0.8em;">
+            /* hr непосредственно внутри parent */
+            .parent > hr {
+                height: 5px;
+            }
+
+            /* все параграфы после hr */
+            .parent hr ~ p {
+                color: green;
+            }
+            
+            /* первый параграф после hr */
+            .parent hr + p {
+                color: yellow;
+            }
+        </code>
+        </pre>
+        <iframe src="./demos/sibling-selectors/index.html" frameborder="0" class="place r" style="width: 50%; height: 60%;"></iframe>
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 28%; left: 5%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 52%; left: 5%;">
+        <img src="./images/bullet-3.svg" alt="" class="place" style="width: 5%; top: 76%; left: 5%;">
+
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 46%; left: 57%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 64%; left: 57%;">
+        <img src="./images/bullet-3.svg" alt="" class="place" style="width: 5%; top: 55%; left: 57%;">
+
+        <img src="./images/arrow-styles-for-children.svg" alt="" class="place" style="width: 27%; top: 50%; left: 41%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 2%;">
+        <code class="language-css" style="font-size: 0.8em;">
+            /* hr непосредственно внутри parent */
+            .parent > hr {
+                height: 5px;
+            }
+
+            /* все параграфы после hr */
+            .parent hr ~ p {
+                color: green;
+            }
+            
+            /* первый параграф после hr */
+            .parent hr + p {
+                color: yellow;
+            }
+        </code>
+        </pre>
+        <iframe src="./demos/sibling-selectors/index.html" frameborder="0" class="place r" style="width: 50%; height: 60%;"></iframe>
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 28%; left: 5%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 52%; left: 5%;">
+        <img src="./images/bullet-3.svg" alt="" class="place" style="width: 5%; top: 76%; left: 5%;">
+
+        <img src="./images/bullet-1.svg" alt="" class="place" style="width: 5%; top: 46%; left: 57%;">
+        <img src="./images/bullet-2.svg" alt="" class="place" style="width: 5%; top: 64%; left: 57%;">
+        <img src="./images/bullet-3.svg" alt="" class="place" style="width: 5%; top: 55%; left: 57%;">
+
+        <img src="./images/arrow-styles-for-children.svg" alt="" class="place" style="width: 27%; top: 50%; left: 41%;">
+
+        <div class="place" style="width:100%; height: 100%; background-color: hsla(48, 38%, 3%, 0.75);"></div>
+        <h2 class="place centered-slide-title" style="top:45%;">Как стилизовать родителя?</h2>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 1.2em;">
+        .parent:has(.child) {
+            /* стили для родителя */
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 1.2em;">
+        .parent:has(.child) {
+            /* стили для родителя */
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-select-parent.svg" alt="" class="place t l" style="width: 35%; top: 13%; left: 7%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 1.2em;">
+        .parent:has(.child) {
+            /* стили для родителя */
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-select-parent.svg" alt="" class="place t l" style="width: 35%; top: 13%; left: 7%;">
+        <img src="./images/arrow-apply-styles-to-parent.svg" alt="" class="place t l" style="width: 38%; top: 58%; left: 48%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/card-with-and-without-image/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card with-image"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card.with-image {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card with-image"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card.with-image {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-add-additional-class.svg" alt="" class="place t r" style="width: 31%; right: 12%; top: 11%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card with-image"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card.with-image {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-add-additional-class.svg" alt="" class="place t r" style="width: 31%; right: 12%; top: 11%;">
+        <img src="./images/arrow-pass-img.svg" alt="" class="place t r" style="width: 30%; right: 12%; top: 42%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card with-image"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card.with-image {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-add-additional-class.svg" alt="" class="place t r" style="width: 31%; right: 12%; top: 11%;">
+        <img src="./images/arrow-pass-img.svg" alt="" class="place t r" style="width: 30%; right: 12%; top: 42%;">
+        <img src="./images/arrow-add-styles.svg" alt="" class="place t r" style="width: 16%; right: 22%; top: 67%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card with-image"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card.with-image {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card:has(img) {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card:has(img) {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-just-pass-img.svg" alt="" class="place r" style="width: 29%; top: 39%; right: 8%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 31%;">
+        <code class="language-css" style="font-size: 0.8em;">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+
+        &lt;div class="card"&gt;
+            &lt;img src="pic.jpg"&gt;
+            ...
+        &lt;/div&gt;
+
+        .card {
+            /* дефолтные стили */
+        }
+
+        .card:has(img) {
+            /* стили для кейса с карточкой */
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-just-pass-img.svg" alt="" class="place r" style="width: 29%; top: 39%; right: 8%;">
+        <img src="./images/arrow-component-knows-what-to-do.svg" alt="" class="place r" style="width: 33%; top: 70%; right: 7%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/file-downloader/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 0.8em;">
+        .file {
+            background-image: var(--bg);
+        }
+
+        .file:has([href$=".pdf"]) {
+            --bg: 'icon-pdf.svg';
+        }
+
+        .file:has([href$=".ppt"]) {
+            --bg: 'icon-ppt.svg';
+        }
+
+        .file:has([href$=".docx"]) {
+            --bg: 'icon-docx.svg';
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 0.8em;">
+        .file {
+            background-image: var(--bg);
+        }
+
+        .file:has([href$=".pdf"]) {
+            --bg: 'icon-pdf.svg';
+        }
+
+        .file:has([href$=".ppt"]) {
+            --bg: 'icon-ppt.svg';
+        }
+
+        .file:has([href$=".docx"]) {
+            --bg: 'icon-docx.svg';
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-look-at-file-type.svg" alt="" class="place t l" style="width: 26%; left: 4%; top: 25%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 0.8em;">
+        .file {
+            background-image: var(--bg);
+        }
+
+        .file:has([href$=".pdf"]) {
+            --bg: 'icon-pdf.svg';
+        }
+
+        .file:has([href$=".ppt"]) {
+            --bg: 'icon-ppt.svg';
+        }
+
+        .file:has([href$=".docx"]) {
+            --bg: 'icon-docx.svg';
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-look-at-file-type.svg" alt="" class="place t l" style="width: 26%; left: 4%; top: 25%;">
+        <img src="./images/arrow-add-needed-icon.svg" alt="" class="place t l" style="width: 28%; left: 61%; top: 40%;">
+    </section>
+
+    <section class="slide">
+        <img src="./images/screenshot-ahmad-shadeed-has-guide.jpg" alt="" class="place rounded" style="width: 80%;">
+        <a href="https://ishadeed.com/article/css-has-guide/" class="copyright">Интерактивный гайд по :has()</a>
+    </section>
+
+    <section class="slide">
         <h2 class="place centered-slide-title">Адаптивная типографика</h2>
     </section>
 
