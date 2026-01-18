@@ -1339,6 +1339,339 @@
     </section>
 
     <section class="slide">
+        <div class="place my-quote" style="width:70%;">
+            <div class="my-quote__title">
+                Style Queries
+            </div>
+            <figure>
+                <blockquote>
+                    <p>Механизм, позволяющий применять стили к элементу в зависимости от значений вычисленных CSS-свойств его контейнера.</p>
+                </blockquote>
+                <figcaption>CSS-спецификация</figcaption>
+            </figure>
+        </div>
+        <a href="https://drafts.csswg.org/css-conditional-5/#style-container" class="copyright">CSS-спецификация: Style Queries</a>
+    </section>
+
+    <section class="slide">
+        <div class="browser-support-row">
+            <div class="browser-support-row__item">
+                <div>Chrome</div>
+                <div>⚠️</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Firefox</div>
+                <div>❌</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Safari</div>
+                <div>⚠️</div>
+            </div>
+        </div>
+        <a href="https://caniuse.com/css-container-queries-style" class="copyright">Can I use: Style Queries</a>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .container {
+                container-type: normal;
+                container-name: card;
+            }
+
+            .element {
+                color: blue;
+            }
+
+            @container card style(--feature: true) {
+                .element {
+                    color: green;
+                }
+            }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .container {
+                container-type: normal;
+                container-name: card;
+            }
+
+            .element {
+                color: blue;
+            }
+
+            @container card style(--feature: true) {
+                .element {
+                    color: green;
+                }
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-unnesessary-to-set.svg" alt="" class="place t l" style="width: 29%; top: 11%; left: 1%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .container {
+                container-type: normal;
+                container-name: card;
+            }
+
+            .element {
+                color: blue;
+            }
+
+            @container card style(--feature: true) {
+                .element {
+                    color: green;
+                }
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-unnesessary-to-set.svg" alt="" class="place t l" style="width: 29%; top: 11%; left: 1%;">
+        <img src="./images/arrow-any-element-is-style-container.svg" alt="" class="place t l" style="width: 28%; top: 10%; left: 64%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .container {
+                container-type: normal;
+                container-name: card;
+            }
+
+            .element {
+                color: blue;
+            }
+
+            @container card style(--feature: true) {
+                .element {
+                    color: green;
+                }
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-unnesessary-to-set.svg" alt="" class="place t l" style="width: 29%; top: 11%; left: 1%;">
+        <img src="./images/arrow-any-element-is-style-container.svg" alt="" class="place t l" style="width: 28%; top: 10%; left: 64%;">
+        <img src="./images/arrow-check-value.svg" alt="" class="place t l" style="width: 28%; top: 42%; left: 56%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .container {
+                container-type: normal;
+                container-name: card;
+            }
+
+            .element {
+                color: blue;
+            }
+
+            @container card style(--feature: true) {
+                .element {
+                    color: green;
+                }
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-unnesessary-to-set.svg" alt="" class="place t l" style="width: 29%; top: 11%; left: 1%;">
+        <img src="./images/arrow-any-element-is-style-container.svg" alt="" class="place t l" style="width: 28%; top: 10%; left: 64%;">
+        <img src="./images/arrow-check-value.svg" alt="" class="place t l" style="width: 28%; top: 42%; left: 56%;">
+        <img src="./images/arrow-for-now-works-only-with-css-custom-properties.svg" alt="" class="place t l" style="width: 31%; top: 67%; left: 61%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/style-queries-card-with-label/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/style-queries-card-with-label-2/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-show-label-for-new-cars.svg" alt="" class="place t l" style="width: 43%; top: 4%; left: 18%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 200px;">
+        <code class="language-css">
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 200px;">
+        <code class="language-css">
+        &lt;div class="card" style="--label: 'новый';"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="card"&gt;
+            ...
+        &lt;/div&gt;
+        </code>
+        </pre>
+        <img src="./images/arrow-pass-label.svg" alt="" class="place t r" style="width: 20%; top: 7%; right: 16%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .card {
+                container-name: card;
+            }
+    
+            @container card style(--label: 'новый') {
+                .card-content::after {
+                    content: 'новый';
+                    background-color: green;
+                }
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-check-and-show.svg" alt="" class="place t r" style="width: 32%; top: 30%; right: 4%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/weather-cards/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/weather-cards/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-unique-theme-for-wheater.svg" alt="" class="place t" style="width: 44%; top: 15%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        &lt;div class="weather-card" style="--snow: true;"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="weather-card" style="--cloudy: true;"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="weather-card" style="--cloudy: true; --sunny: true;"&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class="weather-card" style="--sunny: true;"&gt;
+            ...
+        &lt;/div&gt;
+        </code>
+        </pre>
+        <img src="./images/arrow-pass-wheater-type.svg" alt="" class="place" style="width: 16%; top: 37%; left: 85%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 0.8em;">
+        @container style(--snow: true) {
+            /* меняем цвет фона и иконку */
+        }
+
+        @container style(--cloudy: true) {
+            ...
+        }
+
+        @container style(--sunny: true) {
+            ...
+        }
+
+        @container style(--sunny: true) and style(--cloudy: true) {
+            ...
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-apply-styles.svg" alt="" class="place" style="width: 27%; top: 23%; left: 73%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css" style="font-size: 0.8em;">
+        @container style(--snow: true) {
+            /* меняем цвет фона и иконку */
+        }
+
+        @container style(--cloudy: true) {
+            ...
+        }
+
+        @container style(--sunny: true) {
+            ...
+        }
+
+        @container style(--sunny: true) and style(--cloudy: true) {
+            ...
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-apply-styles.svg" alt="" class="place" style="width: 27%; top: 23%; left: 73%;">
+        <img src="./images/arrow-can-combine-query.svg" alt="" class="place" style="width: 23%; top: 59%; left: 69%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Container queries + Style queries</h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/container-and-style-queries/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/container-and-style-queries/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-width-equal.svg" alt="" class="place t" style="width: 40%; top: 2%; left: 53%;">
+    </section>
+    <section class="slide">
+        <iframe src="./demos/container-and-style-queries/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-width-equal.svg" alt="" class="place t" style="width: 40%; top: 2%; left: 53%;">
+        <img src="./images/arrow-view-different.svg" alt="" class="place t" style="width: 25%; top: 68%; left: 30%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .card {
+            container: card / inline-size;
+        }
+
+        .card-layout {
+            /* дефолтные стили */
+        }
+
+        @container card (width <= 414px) and style(--vertical: true) {
+            .card-layout {
+                /* стили для вертикальной карточки */
+            }
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .card {
+            container: card / inline-size;
+        }
+
+        .card-layout {
+            /* дефолтные стили */
+        }
+
+        @container card (width <= 414px) and style(--vertical: true) {
+            .card-layout {
+                /* стили для вертикальной карточки */
+            }
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-can-use-both.svg" alt="" class="place r" style="width: 31%; right: 14%; top: 45%;">
+    </section>
+
+    <section class="slide">
         <h2 class="place centered-slide-title"><code>:has()</code></h2>
     </section>
 
