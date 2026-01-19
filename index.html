@@ -2169,7 +2169,244 @@
     </section>
 
     <section class="slide">
-        <h2 class="place centered-slide-title">Адаптивная типографика</h2>
+        <h2 class="place centered-slide-title">Типографика</h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/card-typography/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Responsive Typography</h2>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .text {
+            font-size: 30px;
+        }
+
+        @container card (width <= 600px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @container card (width <= 400px) {
+            .text {
+                font-size: 18px;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+
+    <!-- <section class="slide">
+        <iframe src="./demos/card-typography-2/index.html" frameborder="0" class="place iframe"></iframe>
+    </section> -->
+
+    <section class="slide">
+        <iframe src="./demos/responsive-typo/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-responsive-typography.svg" alt="" class="place" style="height: 75%;">
+    </section> 
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Fluid Typography</h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/fluid-typo/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-fluid-typography.svg" alt="" class="place" style="height: 75%;">
+    </section> 
+
+    <section class="slide">
+        <pre class="place l" style="left: 25px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .text {
+            font-size: 30px;
+        }
+
+        @container card (width <= 600px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @container card (width <= 400px) {
+            .text {
+                font-size: 18px;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 25px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .text {
+            font-size: 30px;
+        }
+
+        @container card (width <= 600px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @container card (width <= 400px) {
+            .text {
+                font-size: 18px;
+            }
+        }
+        </code>
+        </pre>
+        <pre class="place r" style="right: 25px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .text {
+            font-size: clamp(18px, 20px, 30px);
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Что за <code>clamp()</code>?</h2>
+    </section>
+
+    <section class="slide">
+        <div class="place my-quote" style="width:70%;">
+            <div class="my-quote__title">
+                <code>clamp()</code>
+            </div>
+            <figure>
+                <blockquote>
+                    <p>Позволяет ограничивать диапазон изменения некоего значения, задавая его нижний и верхний пределы.</p>
+                </blockquote>
+                <figcaption>CSS-спецификация</figcaption>
+            </figure>
+        </div>
+        <a href="https://drafts.csswg.org/css-values/#funcdef-clamp" class="copyright">CSS-спецификация: clamp()</a>
+    </section>
+
+    <section class="slide">
+        <div class="browser-support-row">
+            <div class="browser-support-row__item">
+                <div>Chrome</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Firefox</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Safari</div>
+                <div>✅</div>
+            </div>
+        </div>
+        <a href="https://caniuse.com/?search=clamp%28%29" class="copyright">Can I use: clamp()</a>
+    </section>
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
+    <img src="./images/arrow-max-value.svg" alt="" class="place t l" style="width: 24%; top: 58%; left: 76%;">
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
+    <img src="./images/arrow-max-value.svg" alt="" class="place t l" style="width: 24%; top: 58%; left: 76%;">
+    <img src="./images/arrow-prevered-value.svg" alt="" class="place t l" style="width: 25%; top: 17%; left: 61%;">
+    </section>
+
+    <!-- <section class="slide">
+        <iframe src="./demos/card-typography-3/index.html" frameborder="0" class="place iframe"></iframe>
+    </section> -->
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">18px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">30px</span>)
+    </code>
+    </pre>
+    </section>
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">1.5rem</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-relative-units-better.svg" alt="" class="place" style="width: 54%; top: 27%; left: 68%;">
+    </section>
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    </pre>
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-rem-cqw.svg" alt="" class="place" style="width: 46%; top: 34%; left: 56%;">
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    <img src="./images/arrow-more-smooth.svg" alt="" class="place" style="width: 26%; top: 2%; left: 39%;">
+    </pre>
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    <img src="./images/arrow-more-smooth.svg" alt="" class="place" style="width: 26%; top: 2%; left: 39%;">
+    <img src="./images/arrow-more-predictable.svg" alt="" class="place" style="width: 44%; top: 99%; left: 72%;">
+    </pre>
+
+    </section>
+
+    <section class="slide">
+        <img src="./images/tanya-fokina-fluid-typography.jpeg" alt="" class="place rounded" style="width: 60%;">
+        <a href="https://www.youtube.com/watch?v=kRwLn7iHyD8" class="copyright">Татьяна Фокина: Fluid Typography and CSS clamp()</a>
     </section>
 
     <section class="slide">
