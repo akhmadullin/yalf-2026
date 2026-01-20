@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Тултип</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .button {
+            position: absolute;
+            top: 44%;
+            left: 45%;
+            anchor-name: --anchor-el;
+            background-color: hsla(48, 98%, 64%, 1);
+            border: 5px solid transparent;
+            padding: 10px 25px;
+            font-size: 50px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: white;
+        }
+
+        .button:focus-visible {
+            border: 5px solid #FFFFFF;
+            outline: none;
+        }
+
+        .button:focus {
+            border: 5px solid #FFFFFF;
+            outline: none;
+        }
+
+        .tooltip {
+            position: fixed;
+            margin-bottom: 1rem;
+            position-anchor: --anchor-el;
+            position-area: top;
+            position-try-fallbacks: flip-block;
+            
+            container-type: anchored;
+
+            overflow: unset;
+        }
+
+        .tooltip::before {
+            content: '▼';
+            position: absolute;
+            top: 100%;
+        }
+
+        .tooltip {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .tooltip::before {
+            color: white;
+            margin: 0;
+            line-height: 0.5;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            transform: scaleX(1.5);
+        }
+    </style>
+    <button class="button" id="tooltip-anchor" aria-describedby="tooltip">
+        🖤
+    </button>
+    <div class="tooltip" id="tooltip" role="tooltip" popover="manual">
+        Добавить в&nbsp;избранное
+    </div>
+    <script>
+        const tooltip = document.querySelector('#tooltip')
+        const tooltipAnchor = document.querySelector('#tooltip-anchor')
+    
+        const showTooltip = () => {
+          tooltip.showPopover()
+        }
+
+        const hideTooltip = () => {
+          tooltip.hidePopover()
+        }
+    
+        tooltipAnchor.addEventListener('mouseenter', showTooltip)
+        tooltipAnchor.addEventListener('focus', showTooltip)
+    
+        tooltipAnchor.addEventListener('mouseleave', hideTooltip)
+        tooltipAnchor.addEventListener('blur', hideTooltip)
+    
+        tooltipAnchor.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            hideTooltip()
+          }
+        })
+    </script>
+    <script>
+        const anchor = document.getElementById('tooltip-anchor');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        anchor.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            
+            const rect = anchor.getBoundingClientRect();
+            offsetX = e.clientX - rect.left;
+            offsetY = e.clientY - rect.top;
+            
+            anchor.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            anchor.style.left = (e.clientX - offsetX) + 'px';
+            anchor.style.top = (e.clientY - offsetY) + 'px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            anchor.style.cursor = 'move';
+        });
+    </script>
+</body>
+</html>

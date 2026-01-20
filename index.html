@@ -2775,8 +2775,292 @@
     </section>
 
     <section class="slide">
-        // todo в конце было бы прикольно сделать демку, которы бы по максимуму бы использовала в себе все ранее описанные фичи
+        <img src="./images/single-tooltip.svg" alt="" class="place" style="height: 40%;">
     </section>
+
+    <section class="slide">
+        <img src="./images/scheme-adaptive-tooltip.svg" alt="" class="place" style="width: 70%;">
+    </section>
+
+    <section class="slide">
+        <div class="place my-quote" style="width:68%;">
+            <div class="my-quote__title">
+                Anchor Positioning
+            </div>
+            <figure>
+                <blockquote>
+                    <p>Определяет, как элемент может менять свой размер и позиционироваться на странице относительно одного или нескольких якорей.</p>
+                </blockquote>
+                <figcaption>CSS-спецификация</figcaption>
+            </figure>
+        </div>
+        <a href="https://www.w3.org/TR/css-anchor-position-1/" class="copyright">CSS-спецификация: anchor positioning</a>
+    </section>
+
+    <section class="slide">
+        <div class="browser-support-row">
+            <div class="browser-support-row__item">
+                <div>Chrome</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Firefox</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Safari</div>
+                <div>✅</div>
+            </div>
+        </div>
+        <a href="https://caniuse.com/css-anchor-positioning" class="copyright">Can I use: Anchor Positioning</a>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .anchor {
+                anchor-name: --my-anchor;
+            }
+
+            .tooltip {
+                position: fixed;
+                position-anchor: --my-anchor;
+                position-area: top;
+                position-try-fallbacks: flip-block;
+            }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .anchor {
+                anchor-name: --my-anchor;
+            }
+
+            .tooltip {
+                position: fixed;
+                position-anchor: --my-anchor;
+                position-area: top;
+                position-try-fallbacks: flip-block;
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-define-anchor.svg" alt="" class="place t l" style="width: 23%; top: 15%; left: 67%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .anchor {
+                anchor-name: --my-anchor;
+            }
+
+            .tooltip {
+                position: fixed;
+                position-anchor: --my-anchor;
+                position-area: top;
+                position-try-fallbacks: flip-block;
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-define-anchor.svg" alt="" class="place t l" style="width: 23%; top: 15%; left: 67%;">
+        <img src="./images/arrow-link-to-anchor.svg" alt="" class="place t l" style="width: 30%; top: 39%; left: 66%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .anchor {
+                anchor-name: --my-anchor;
+            }
+
+            .tooltip {
+                position: fixed;
+                position-anchor: --my-anchor;
+                position-area: top;
+                position-try-fallbacks: flip-block;
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-define-anchor.svg" alt="" class="place t l" style="width: 23%; top: 15%; left: 67%;">
+        <img src="./images/arrow-link-to-anchor.svg" alt="" class="place t l" style="width: 30%; top: 39%; left: 66%;">
+        <img src="./images/arrow-place-top.svg" alt="" class="place t l" style="width: 25%; top: 53%; left: 4%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+            .anchor {
+                anchor-name: --my-anchor;
+            }
+
+            .tooltip {
+                position: fixed;
+                position-anchor: --my-anchor;
+                position-area: top;
+                position-try-fallbacks: flip-block;
+            }
+        </code>
+        </pre>
+        <img src="./images/arrow-define-anchor.svg" alt="" class="place t l" style="width: 23%; top: 15%; left: 67%;">
+        <img src="./images/arrow-link-to-anchor.svg" alt="" class="place t l" style="width: 30%; top: 39%; left: 66%;">
+        <img src="./images/arrow-place-top.svg" alt="" class="place t l" style="width: 25%; top: 53%; left: 4%;">
+        <img src="./images/arrow-bottom-fallback.svg" alt="" class="place t l" style="width: 32%; top: 75%; left: 61%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/tooltip-0-0/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .tooltip::before {
+            content: '▼';
+            position: absolute;
+            top: 100%;
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .tooltip::before {
+            content: '▼';
+            position: absolute;
+            top: 100%;
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-add-tail.svg" alt="" class="place t l" style="width: 25%; top: 24%; left: 65%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/tooltip-0/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css" style="font-size: 0.7em;">
+                .tooltip {
+                    ...
+                    position-try-fallbacks: flip-block;
+                    container-type: anchored;
+                }
+
+                .tooltip::before {
+                    content: '▼';
+                    position: absolute;
+                    top: 100%;
+                }
+        
+                @container anchored(fallback: flip-block) {
+                    .tooltip::before {
+                        content: '▲';
+                        top: auto;
+                        bottom: 100%;
+                    }
+                }
+            </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css" style="font-size: 0.7em;">
+                .tooltip {
+                    ...
+                    position-try-fallbacks: flip-block;
+                    container-type: anchored;
+                }
+
+                .tooltip::before {
+                    content: '▼';
+                    position: absolute;
+                    top: 100%;
+                }
+        
+                @container anchored(fallback: flip-block) {
+                    .tooltip::before {
+                        content: '▲';
+                        top: auto;
+                        bottom: 100%;
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-define-container-2.svg" alt="" class="place t l" style="width: 24%; left: 7%; top: 10%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css" style="font-size: 0.7em;">
+                .tooltip {
+                    ...
+                    position-try-fallbacks: flip-block;
+                    container-type: anchored;
+                }
+
+                .tooltip::before {
+                    content: '▼';
+                    position: absolute;
+                    top: 100%;
+                }
+        
+                @container anchored(fallback: flip-block) {
+                    .tooltip::before {
+                        content: '▲';
+                        top: auto;
+                        bottom: 100%;
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-define-container-2.svg" alt="" class="place t l" style="width: 24%; left: 7%; top: 10%;">
+        <img src="./images/arrow-when-fallback-applied.svg" alt="" class="place t l" style="width: 25%; left: 70%; top: 23%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+            <code class="language-css" style="font-size: 0.7em;">
+                .tooltip {
+                    ...
+                    position-try-fallbacks: flip-block;
+                    container-type: anchored;
+                }
+
+                .tooltip::before {
+                    content: '▼';
+                    position: absolute;
+                    top: 100%;
+                }
+        
+                @container anchored(fallback: flip-block) {
+                    .tooltip::before {
+                        content: '▲';
+                        top: auto;
+                        bottom: 100%;
+                    }
+                }
+            </code>
+        </pre>
+        <img src="./images/arrow-define-container-2.svg" alt="" class="place t l" style="width: 24%; left: 7%; top: 10%;">
+        <img src="./images/arrow-when-fallback-applied.svg" alt="" class="place t l" style="width: 25%; left: 70%; top: 23%;">
+        <img src="./images/arrow-move-tail.svg" alt="" class="place t l" style="width: 28%; left: 6%; top: 71%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/tooltip/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/menu/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <img src="./images/fc-2025-roma-akhmadullin.jpg" alt="" class="place rounded" style="width: 70%;">
+        <a href="https://youtu.be/IiBuTd-Llkg" class="copyright">Рома Ахмадуллин: CSS Anchor Positioning</a>
+    </section>
+
+    <!-- <section class="slide">
+        // todo в конце было бы прикольно сделать демку, которы бы по максимуму бы использовала в себе все ранее описанные фичи
+    </section> -->
 
     <section class="slide">
         <h2 class="place centered-slide-title">Приготовьте телефоны <span>🤳🏼</span></h2>
