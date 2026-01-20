@@ -2736,9 +2736,40 @@
     </section> 
 
     <section class="slide">
-        <h2 class="place centered-slide-title"><code>@media (prefers-...)</code></h2>
+        <h2 class="place centered-slide-title">Предпочтения пользователя</h2>
     </section>
 
+    <section class="slide" style="padding-right: 20px;">
+        <h3><code>@media(пользовательские предпочтения)</code></h3>
+        <ul>
+            <li><code>prefers-color-scheme</code> – светлая / тёмная тема</li>
+            <li><code>prefers-contrast</code> – повышенная / пониженная контрастность</li>
+            <li><code>prefers-reduced-motion</code> – наличие анимаций</li>
+            <li><code>prefers-reduced-transparency</code> – наличие прозрачности</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .parallax-scrolling-image {
+            position: sticky;
+        }
+            
+        @media (prefers-reduced-motion: reduce) {
+            .parallax-scrolling-image {
+                position: relative;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img src="./images/screenshot-article-about-media-prefers.jpg" alt="" class="place rounded" style="width: 70%;">
+        <a href="https://a11y-blog.dev/ru/articles/css-media-features-for-a11y/" class="copyright">Татьяна Фокина: CSS-медиафичи для улучшения доступности</a>
+    </section>
+    
     <section class="slide">
         <h2 class="place centered-slide-title">Anchor Positioning</h2>
     </section>
