@@ -1867,7 +1867,7 @@
 
         <img src="./images/arrow-styles-for-children.svg" alt="" class="place" style="width: 27%; top: 50%; left: 41%;">
 
-        <div class="place" style="width:100%; height: 100%; background-color: hsla(48, 38%, 3%, 0.75);"></div>
+        <div class="place" style="width:100%; height: 100%; background-color: hsla(48, 38%, 3%, 0.75); backdrop-filter: blur(2px);"></div>
         <h2 class="place centered-slide-title" style="top:45%;">Как стилизовать родителя?</h2>
     </section>
 
@@ -2412,6 +2412,328 @@
     <section class="slide">
         <h2 class="place centered-slide-title">Logical properties</h2>
     </section>
+
+    <section class="slide">
+        <iframe src="./demos/logical-properties/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .card {
+            position: relative;
+            padding: 20px;
+            padding-right: 70px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/logical-properties-2/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-russian.svg" alt="" class="place" style="width: 20%; top: 22%; left: 29%;">
+        <img src="./images/arrow-arabic.svg" alt="" class="place" style="width: 20%; top: 22%; left: 73%;">
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 100px;">
+        <code class="language-css">
+        html[dir="ltr"] .card {
+            position: relative;
+            padding: 20px;
+            padding-right: 70px;
+        }
+
+        html[dir="ltr"] .icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <pre class="place r" style="right: 140px;">
+        <code class="language-css">
+        html[dir="rtl"] .card {
+            position: relative;
+            padding: 20px;
+            padding-left: 70px;
+        }
+
+        html[dir="rtl"] .icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 100px;">
+        <code class="language-css">
+        html[dir="ltr"] .card {
+            position: relative;
+            padding: 20px;
+            padding-right: 70px;
+        }
+
+        html[dir="ltr"] .icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <pre class="place r" style="right: 140px;">
+        <code class="language-css">
+        html[dir="rtl"] .card {
+            position: relative;
+            padding: 20px;
+            padding-left: 70px;
+        }
+
+        html[dir="rtl"] .icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-left-right.svg" alt="" class="place" style="width: 20%; top: 8%; left: 27%;">
+        <img src="./images/line-1.svg" alt="" class="place" style="width: 13%; top: 20%; left: 25%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 100px;">
+        <code class="language-css">
+        html[dir="ltr"] .card {
+            position: relative;
+            padding: 20px;
+            padding-right: 70px;
+        }
+
+        html[dir="ltr"] .icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <pre class="place r" style="right: 140px;">
+        <code class="language-css">
+        html[dir="rtl"] .card {
+            position: relative;
+            padding: 20px;
+            padding-left: 70px;
+        }
+
+        html[dir="rtl"] .icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-left-right.svg" alt="" class="place" style="width: 20%; top: 8%; left: 27%;">
+        <img src="./images/line-1.svg" alt="" class="place" style="width: 13%; top: 20%; left: 25%;">
+
+        <img src="./images/arrow-right-left.svg" alt="" class="place" style="width: 20%; top: 8%; left: 70%;">
+        <img src="./images/line-1.svg" alt="" class="place" style="width: 13%; top: 20%; left: 66%;">
+    </section>
+    <section class="slide">
+        <pre class="place l" style="left: 100px;">
+        <code class="language-css">
+        html[dir="ltr"] .card {
+            position: relative;
+            padding: 20px;
+            padding-right: 70px;
+        }
+
+        html[dir="ltr"] .icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <pre class="place r" style="right: 140px;">
+        <code class="language-css">
+        html[dir="rtl"] .card {
+            position: relative;
+            padding: 20px;
+            padding-left: 70px;
+        }
+
+        html[dir="rtl"] .icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-left-right.svg" alt="" class="place" style="width: 20%; top: 8%; left: 27%;">
+        <img src="./images/line-1.svg" alt="" class="place" style="width: 13%; top: 20%; left: 25%;">
+
+        <img src="./images/arrow-right-left.svg" alt="" class="place" style="width: 20%; top: 8%; left: 70%;">
+        <img src="./images/line-1.svg" alt="" class="place" style="width: 13%; top: 20%; left: 66%;">
+
+        <img src="./images/arrow-change-left-to-right.svg" alt="" class="place" style="width: 18%; top: 69%; left: 47%;">
+        <img src="./images/line-2.svg" alt="" class="place" style="width: 8%; top: 69.4%; left: 22%;">
+        <img src="./images/line-2.svg" alt="" class="place" style="width: 8%; top: 69.4%; left: 62%;">
+        <img src="./images/line-2.svg" alt="" class="place" style="width: 8%; top: 37.4%; left: 32%;">
+        <img src="./images/line-2.svg" alt="" class="place" style="width: 8%; top: 37.4%; left: 73%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/logical-properties-3/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-russian.svg" alt="" class="place" style="width: 19%; top: 29%; left: 20%;">
+        <img src="./images/arrow-arabic.svg" alt="" class="place" style="width: 19%; top: 29%; left: 56%;">
+        <img src="./images/arrow-japanese.svg" alt="" class="place" style="height: 15%; top: 11%; left: 84%;">
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/logical-properties-3/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-russian.svg" alt="" class="place" style="width: 19%; top: 29%; left: 20%;">
+        <img src="./images/arrow-arabic.svg" alt="" class="place" style="width: 19%; top: 29%; left: 56%;">
+        <img src="./images/arrow-japanese.svg" alt="" class="place" style="height: 15%; top: 11%; left: 84%;">
+        <div class="place" style="width:100%; height: 100%; background-color: hsla(48, 38%, 3%, 0.75); backdrop-filter: blur(2px);"></div>
+        <h2 class="place centered-slide-title" style="top:45%;">Добавлять третью вилку?</h2>
+    </section>
+
+    <section class="slide">
+        <div class="place my-quote" style="width:70%;">
+            <div class="my-quote__title">
+                Логические свойства
+            </div>
+            <figure>
+                <blockquote>
+                    <p>Позволяют описывать размеры и отступы на основе логических значений – основанных на направлении текста и режима письма.</p>
+                </blockquote>
+                <figcaption>CSS-спецификация</figcaption>
+            </figure>
+        </div>
+        <a href="https://www.w3.org/TR/css-logical-1/" class="copyright">CSS-спецификация: Логические свойства</a>
+    </section>
+
+    <section class="slide">
+        <div class="browser-support-row">
+            <div class="browser-support-row__item">
+                <div>Chrome</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Firefox</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Safari</div>
+                <div>✅</div>
+            </div>
+        </div>
+        <a href="https://caniuse.com/css-logical-props" class="copyright">Can I use: Logical properties</a>
+    </section>
+
+    <section class="slide" style="padding-right: 30px;">
+        <h3>Группы логических свойств</h3>
+        <ul>
+            <li>
+                <code>block</code> – направление расположения блоки контента на странице
+            </li>
+            <li>
+                <code>inline</code> – направление расположения контента внутри блока
+            </li>
+            <li>
+                <code>size</code> – альтернатива width и height
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide" style="padding-right: 30px;">
+        <h3>Свойста с логическими эквивалентами</h3>
+        <ul style="columns: 2;">
+            <li><code>margin</code></li>
+            <li><code>padding</code></li>
+            <li><code>border</code></li>
+            <li><code>border-radius</code></li>
+            <li><code>width</code></li>
+            <li><code>height</code></li>
+            <li><code>inset</code></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 70px;">
+        <code class="language-css">
+        .card {
+            position: relative;
+            padding: 20px;
+            padding-right: 70px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+        <pre class="place r" style="right: 70px;">
+        <code class="language-css">
+        .card {
+            position: relative;
+            padding: 20px;
+            padding-inline-end: 70px;
+        }
+
+        .icon {
+            position: absolute;
+            inset-block-start: 20px;
+            inset-inline-end: 20px;
+            inline-size: 40px;
+            block-size: 40px;
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-physical-properties.svg" alt="" class="place" style="width: 26%; top: 8%; left: 24%;">
+        <img src="./images/arrow-logical-propeties.svg" alt="" class="place" style="width: 26%; top: 8%; left: 70%;">
+        <img src="./images/arrow-3.svg" alt="" class="place" style="width: 8%; top: 8.5%; left: 48%;">
+    </section>
+
+    <!-- <section class="slide">
+        <img src="./images/scheme-logical-to-physical.svg" alt="" class="place" style="width: 80%;">
+    </section> -->
+    <section class="slide">
+        <img src="./images/scheme-logical-to-physical-2.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    
+    <section class="slide">
+        <img src="./images/screenshot-doka-logical-properties.jpg" alt="" class="place rounded" style="width: 70%;">
+        <a href="https://doka.guide/css/logical-properties/" class="copyright">Дока: Логические свойства CSS</a>
+    </section> 
 
     <section class="slide">
         <h2 class="place centered-slide-title"><code>@media (prefers-...)</code></h2>
