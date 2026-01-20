@@ -113,9 +113,9 @@
             opacity: 0.4;
         }
 
-        /* .invisible {
+        .invisible {
             opacity: 0;
-        } */
+        }
 
         .bold {
             font-weight: bold;
@@ -138,13 +138,13 @@
             text-align: center;
         } */
 
-        /* .light-image {
+        .light-image {
             filter: brightness(0.8);
         }
 
         .dark-image {
             filter: brightness(1.4) contrast(0.9);
-        } */
+        }
 
         a.copyright {
             color: var(--color-black);
@@ -262,7 +262,7 @@
             align-items: center;
         }
 
-        /* .slide.slide-with-table {
+        .slide.slide-with-table {
             padding: 50px 40px 0 80px;
         }
 
@@ -283,7 +283,7 @@
         .slide tr:not(:last-of-type) > * {
             background-image: linear-gradient(to top, var(--color-line) 0.1em, transparent 0.1em);
             background-repeat: repeat-x;
-        } */
+        }
 
         .centered-text {
             text-align: center;
@@ -318,12 +318,13 @@
         <div class="place l" style="padding-left: 50px;">
             <img src="./images/roma-akmadullin.jpg" style="height: 280px; border-radius: 50%;" />
         </div>
-        <div class="place r t" style="padding-top: 156px; padding-right: 70px;">
+        <div class="place r t" style="padding-top: 130px; padding-right: 70px;">
             <h2>Рома Ахмадуллин</h2>
             <ul>
                 <li>лид фронтенда в Дроме</li>
                 <li>контрибьючу в Доку</li>
                 <li>живу во Владивостоке</li>
+                <li>хожу в походы</li>
             </ul>
         </div>
     </section>
@@ -340,14 +341,19 @@
         <img src="./images/responsive-design-screens.svg" alt="" class="place" style="width: 80%;">
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
         <ul>
             <li>вьюпорт</li>
         </ul>
-    </section>
+    </section> -->
 
     <section class="slide">
+        <h2 class="place centered-slide-title">Проблема</h2>
+    </section>
+
+
+    <!-- <section class="slide">
         <h2 class="place centered-slide-title">✌🏻 Две проблемы</h2>
     </section>
 
@@ -361,7 +367,7 @@
 
     <section class="slide">
         тут еще пара слайдов про первую проблему
-    </section>
+    </section> -->
 
     <section class="slide">
         <h2 class="place centered-slide-title">Брейкпоинты</h2>
@@ -376,7 +382,7 @@
     </section>
 
     <section class="slide">
-        <img src="./images/screenshot-components.jpg" alt="" class="place rounded" style="height:80%;">
+        <img src="./images/screenshot-components.jpg" alt="" class="place rounded dark-image" style="height:80%;">
     </section>
 
     <section class="slide">
@@ -3059,11 +3065,147 @@
     </section>
 
     <!-- <section class="slide">
+        <h2 class="place centered-slide-title">💪🏻 CSS могёт!</h2>
+    </section> -->
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Подытожим</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Адаптив – не только вьюпорт</h2>
+    </section>
+
+    <!-- <section class="slide">
+        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <ul>
+            <li>вьюпорт</li>
+            <li>контент</li>
+            <li>размеры контейнера</li>
+            <li>окружающую среду</li>
+            <li>предпочтения пользователя</li>
+        </ul>
+    </section> -->
+
+    <section class="slide slide-with-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Адаптив</th>
+                    <th class="invisible">CSS-cвойства</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>вьюпорт</td>
+                    <td class="invisible">
+                        <code>@media(size)</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>контент</td>
+                    <td class="invisible">
+                        <code>flex</code>,
+                        <code>grid</code>,
+                        <code>:has()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>контейнер</td>
+                    <td class="invisible">
+                        <code>@container</code>,
+                        <code>clamp()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>предпочтения пользователя</td>
+                    <td class="invisible">
+                        <code>@media(prefers-...)</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>окружающая среда</td>
+                    <td class="invisible">
+                        <code>logical properties</code>,
+                        <code>anchor positioning</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="slide slide-with-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Адаптив</th>
+                    <th>CSS-cвойства</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>вьюпорт</td>
+                    <td>
+                        <code>@media(size)</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>контент</td>
+                    <td>
+                        <code>flex</code>,
+                        <code>grid</code>,
+                        <code>:has()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>контейнер</td>
+                    <td>
+                        <code>@container</code>,
+                        <code>clamp()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>предпочтения пользователя</td>
+                    <td>
+                        <code>@media(prefers-...)</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>окружающая среда</td>
+                    <td>
+                        <code>logical properties</code>,
+                        <code>anchor positioning</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Важны не сами CSS-фичи</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Важен контекст</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title" style="line-height: 1.4;">Удобные интерфейсы <br> – <br>наша ответственность</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Веб-платформа даёт инструмент</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Дело за нами</h2>
+    </section>
+
+    <!-- <section class="slide">
         // todo в конце было бы прикольно сделать демку, которы бы по максимуму бы использовала в себе все ранее описанные фичи
     </section> -->
 
     <section class="slide">
-        <h2 class="place centered-slide-title">Приготовьте телефоны <span>🤳🏼</span></h2>
+        <h2 class="place centered-slide-title">Время шарить ссылочки <span>🤳🏼</span></h2>
     </section>
 
     <section class="slide">
@@ -3102,7 +3244,7 @@
         </div>
         <div class="place r t" style="width: 22%; top: 6%; right: 5%;">
             <h4 class="end__subheading centered-text">Оценить доклад</h4>
-            <img src="./images/todo" class="rounded qr-code" alt="" style="width: 100%; padding:0;">
+            <img src="./images/qr-code-placeholder.svg" class="rounded qr-code" alt="" style="width: 100%; padding:0; background: none;">
         </div> 
     </section>
    
