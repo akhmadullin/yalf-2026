@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>container-type: size</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            color: #ffffff;
+            font-size: 18px;
+            padding: 40px;
+            color-scheme: dark;
+        }
+
+        .container {
+            border: 2px solid white;
+            border-radius: 6px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container-type-size {
+            container-type: size;
+        }
+    </style>
+    <div class="layout">
+        <div id="container" class="container">
+            <p>Пока для контейнера не будет применен <code>container-type: size</code>, <br> высота будет тянуться под контент.</p>
+            <p>Если добавить – высота схлопнется.</p>
+        </div>
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        window.addEventListener('message', (e) => {
+          if (e.data === 'add-container-type') {
+            container.classList.add('container-type-size');
+          } else if (e.data === 'remove-container-type') {
+            container.classList.remove('container-type-size');
+          }
+        });
+      </script>
+</body>
+</html>

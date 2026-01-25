@@ -139,7 +139,7 @@
         } */
 
         .light-image {
-            filter: brightness(0.8);
+            filter: brightness(0.9);
         }
 
         .dark-image {
@@ -297,10 +297,35 @@
             border-radius: 30px;
             margin: 0 auto;
         }
+
+        .slide.section-title {
+            background-color: var(--color-additional);
+            color: var(--color-black);
+        }
+
+        .slide.section-title::after {
+            display: none;
+        }
+
+        .slide .shout {
+            font-size: 3em;
+            text-align: left;
+            padding-left: var(--slide-side);
+            padding-right: var(--slide-side);
+            box-sizing: border-box;
+        }
+
+        .slide .shout small {
+            color: #ce2424;
+            margin-bottom: 10px;
+            display: block;
+        }
     </style>
 </head>
 
 <body class="shower list">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/baseline-status@1/baseline-status.min.js" type="module"></script> -->
+     
     <header class="caption">
         <h1 style="margin-bottom: 10px;">По-настоящему адаптивный интерфейс</h1>
         <p style="font-weight: bold; margin-bottom: 5px;">Рома Ахмадуллин</p>
@@ -313,7 +338,7 @@
             <h3 style="margin-top: 5px; font-weight: normal;">Рома Ахмадуллин, Дром</h3>
         </div>
     </section>
-    
+
 
     <section id="about-me" class="slide">
         <div class="place l" style="padding-left: 50px;">
@@ -331,11 +356,34 @@
     </section>
 
     <section class="slide">
-        <h2 class="place centered-slide-title">Адаптивный интерфейс</h2>
+        <img src="./images/mem-adaptive-web-design-wikipedia.jpg" alt="" class="place rounded" style="height: 80%;">
     </section>
 
     <section class="slide">
+        <img src="./images/old-pk.png" alt="" class="place" style="height: 60%;"> 
+    </section>
+
+    <section class="slide">
+        <img src="./images/old-pk.png" alt="" class="place l" style="height: 40%; top: 60%; left: 20%;"> 
+        <img src="./images/old-phone.png" alt="" class="place r" style="height: 40%; top: 60%; right: 20%;">
+    </section>
+    <section class="slide">
+        <img src="./images/old-pk.png" alt="" class="place l" style="height: 40%; top: 60%; left: 20%;"> 
+        <img src="./images/old-phone.png" alt="" class="place r" style="height: 40%; top: 60%; right: 20%;">
+        <img src="./images/scheme-site-com.svg" alt="" class="place t" style="width: 45%; top: 11%; left: 54%;">
+    </section>
+
+    <!-- <section class="slide">
+        <h2 class="place centered-slide-title">Адаптивный интерфейс</h2>
+    </section> -->
+
+    <!-- <section class="slide">
         <h2 class="place centered-slide-title">Responsive Web Design</h2>
+    </section> -->
+
+    <section class="slide">
+        <img src="./images/screenshot-article-responsive-web-design.jpg" alt="" class="place rounded" style="height: 80%;">
+        <a href="https://alistapart.com/article/responsive-web-design/" class="copyright">Responsive Web Design</a>
     </section>
 
     <section class="slide">
@@ -349,9 +397,9 @@
         </ul>
     </section> -->
 
-    <section class="slide">
+    <!-- <section class="slide">
         <h2 class="place centered-slide-title">Проблема</h2>
-    </section>
+    </section> -->
 
 
     <!-- <section class="slide">
@@ -375,7 +423,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="place centered-slide-title" style="text-decoration: line-through;">Брейкпоинты</h2>
+        <h2 class="place centered-slide-title" style="text-decoration: line-through 8px hsla(48, 99%, 72%, 1);">&nbsp;Брейкпоинты&nbsp;</h2>
     </section>
 
     <section class="slide">
@@ -383,8 +431,12 @@
     </section>
 
     <section class="slide">
-        <img src="./images/screenshot-components.jpg" alt="" class="place rounded dark-image" style="height:80%;">
+        <img src="./images/screenshot-components-lights-2.jpg" alt="" class="place rounded" style="height:80%;">
     </section>
+
+    <!-- <section class="slide">
+        <img src="./images/screenshot-components-lights-3.png" alt="" class="place rounded" style="height:80%;">
+    </section> -->
 
     <section class="slide">
         <img src="./images/components-as-bricks.svg" alt="" class="place" style="width: 80%;">
@@ -399,8 +451,24 @@
     </section> -->
 
     <section class="slide">
-        <h2 class="place centered-slide-title">Адаптив – не только про вьюпорт?</h2>
+        <h2 class="place centered-slide-title">Компоненту не важен вьюпорт</h2>
     </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Важен контекст</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">🤔 Что нужно учесть?</h2>
+    </section>
+
+    <!-- <section class="slide">
+        <baseline-status featureId="anchor-positioning"></baseline-status>
+    </section> -->
+
+    <!-- <section class="slide">
+        <h2 class="place centered-slide-title">Адаптив – не только про вьюпорт?</h2>
+    </section> -->
 
     <section class="slide">
         <iframe src="./demos/adaptive-to-content-one-card/index.html" frameborder="0" class="place iframe"></iframe>
@@ -417,9 +485,8 @@
     </section>
 
     <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <h3 class="without-margins">Контекст включает в себя</h2>
         <ul>
-            <li class="muted">вьюпорт</li>
             <li>контент</li>
         </ul>
     </section>
@@ -508,6 +575,9 @@
     </section>
 
     <section class="slide">
+        <iframe src="./demos/card-desktop-mobile/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
         <iframe src="./demos/card-desktop-mobile-2/index.html" frameborder="0" class="place iframe"></iframe>
     </section>
     <section class="slide">
@@ -524,9 +594,8 @@
     </section>
 
     <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <h3 class="without-margins">Контекст включает в себя</h2>
         <ul>
-            <li class="muted">вьюпорт</li>
             <li class="muted">контент</li>
             <li>размеры контейнера</li>
         </ul>
@@ -541,9 +610,8 @@
     </section>
 
     <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <h3 class="without-margins">Контекст включает в себя</h2>
         <ul>
-            <li class="muted">вьюпорт</li>
             <li class="muted">контент</li>
             <li class="muted">размеры контейнера</li>
             <li>окружающую среду</li>
@@ -558,15 +626,35 @@
     </section>
 
     <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
+        <h3 class="without-margins">Контекст включает в себя</h2>
         <ul>
-            <li class="muted">вьюпорт</li>
             <li class="muted">контент</li>
             <li class="muted">размеры контейнера</li>
             <li class="muted">окружающую среду</li>
             <li>предпочтения пользователя</li>
         </ul>
     </section>
+    <section class="slide">
+        <h3 class="without-margins">Контекст включает в себя</h2>
+        <ul>
+            <li>контент</li>
+            <li>размеры контейнера</li>
+            <li>окружающую среду</li>
+            <li>предпочтения пользователя</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Адаптив – не только про вьюпорт?</h2>
+    </section>
+
+    <section class="slide">
+        <img src="./images/mem-pen-pineapple.png" alt="" class="place b" style="height: 80%;">
+        <h3 class="place t" style="top: 7%; left: 53%;">Адаптив</h3>
+        <h3 class="place l" style="top: 30%; left: 31%;">Вьюпорт</h3>
+        <h3 class="place r" style="top: 30%; right: 24%;">Контекст</h3>
+    </section>
+
     <section class="slide">
         <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
         <ul>
@@ -577,7 +665,12 @@
             <li>предпочтения пользователя</li>
         </ul>
     </section>
+
     <section class="slide">
+        <h2 class="place centered-slide-title">🪛 Как реализовать?</h2>
+    </section>
+
+    <!-- <section class="slide">
         <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
         <ul>
             <li>вьюпорт</li>
@@ -599,7 +692,7 @@
         </ul>
         <img src="./images/arrow-we-can-work.svg" alt="" class="place t" style="width: 41%; top: 26%; left: 44%;">
         <img src="./images/what-to-do-with-this.svg" alt="" class="place b" style="width: 43%; bottom: 32%; left: 66%;">
-    </section>
+    </section> -->
 
     <section class="slide">
         <img src="./images/scheme-adaptiveness-timeline-1.svg" alt="" class="place" style="width: 80%; margin-top: -20px;">
@@ -617,10 +710,16 @@
         <img src="./images/scheme-adaptiveness-timeline-5.svg" alt="" class="place" style="width: 80%; margin-top: -20px;">
     </section>
 
-    <section class="slide">
-        <!-- <h2 class="place centered-slide-title">💅🏼 Что там по новшествам в CSS?</h2> -->
-        <h2 class="place centered-slide-title">💅🏼 Чем порадует CSS?</h2>
+    <section class="slide section-title">
+        <h2 class="shout">
+            <small>Адаптив</small>
+            Размер контейнера
+        </h2>
     </section>
+
+    <!-- <section class="slide">
+        <h2 class="place centered-slide-title">💅🏼 Чем порадует CSS?</h2>
+    </section> -->
 
     <section class="slide">
         <h2 class="place centered-slide-title">Container queries</h2>
@@ -660,13 +759,19 @@
     </section>
 
     <section class="slide">
-        <img src="./images/scheme-media-vs-container-1.svg" alt="" class="place" style="width: 80%;">
+        <img src="./images/scheme-media-vs-container-000-1.svg" alt="" class="place" style="width: 80%;">
     </section>
     <section class="slide">
-        <img src="./images/scheme-media-vs-container-2.svg" alt="" class="place" style="width: 80%;">
+        <img src="./images/scheme-media-vs-container-000-2.svg" alt="" class="place" style="width: 80%;">
     </section>
     <section class="slide">
-        <img src="./images/scheme-media-vs-container-3.svg" alt="" class="place" style="width: 80%;">
+        <img src="./images/scheme-media-vs-container-000-3.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-media-vs-container-000-4.svg" alt="" class="place" style="width: 80%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-media-vs-container-000-5.svg" alt="" class="place" style="width: 80%;">
     </section>
 
     <section class="slide">
@@ -684,6 +789,35 @@
                 .container {
                     container-type: inline-size;
                 }
+
+                .element {
+                    color: blue;
+                }
+
+                @container (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
+                }
+            </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+
+                @container (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
+                }
             </code>
         </pre>
         <img src="./images/arrow-define-container.svg" alt="" class="place" style="width: 25%; left: 20%; top: 20%;">
@@ -697,6 +831,12 @@
 
                 .element {
                     color: blue;
+                }
+
+                @container (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
                 }
             </code>
         </pre>
@@ -856,12 +996,13 @@
         <h3><code>container-type</code></h3>
         <ul>
             <li><code>normal</code> – дефолтное значение</li>
-            <li><code>inline-size</code> – следим за <i>inline</i> осью</li>
-            <li><code>size</code> – следим за <i>inline</i> и <i>block</i> осями</li>
+            <li><code>inline-size</code> – следим за <span class="accented">inline</span> осью</li>
+            <li><code>size</code> – следим за <span class="accented">inline</span> и <span class="accented">block</span> осями</li>
         </ul>
     </section>
 
-    <section class="slide">
+
+    <!-- <section class="slide">
         <pre class="place l t" style="top: 25px; left: 20px;">
         <code class="language-css" style="font-size: 0.8em;">
         .container {
@@ -1186,10 +1327,8 @@
 
     <section class="slide">
         <h2 class="place centered-slide-title" style="line-height: 1.4;">Размеры контейнера <br> === <br> Размерам content-box</h2>
-    </section>
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">container size === content-box size</h2>
     </section> -->
+
 
     <section class="slide">
         <img src="./images/card-prototype.svg" alt="" class="place" style="width: 80%;">
@@ -1198,15 +1337,16 @@
     <section class="slide">
         <pre class="place">
         <code class="language-css" style="font-size: 0.8em;">
-        &lt;div class="card"&gt;
+        &lt;article class="card"&gt;
             &lt;div class="card-content"&gt;
                 &lt;img src="pic.jpg" class="image"&gt;
                 &lt;div class="text-container"&gt;
                     &lt;h3 class="title"&gt;&lt;/h3&gt;
                     &lt;p class="text"&gt;&lt;/p&gt;
+                    &lt;a href="site.com" class="link"&gt;&lt;/a&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;/article&gt;
         </code>
         </pre>
     </section>
@@ -1248,6 +1388,108 @@
     </section>
     <section class="slide">
         <iframe src="./demos/card-container-query-3/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">✌🏻 Две заметки про размер</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title" style="line-height: 1.4;">Контент не влияет на размеры контейнера</h2>
+    </section>
+
+    <section class="slide">
+        <style>
+            .label-for-code-line {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                user-select: none;
+                color-scheme: dark;
+            }
+
+            .checkbox-for-code-line {
+                accent-color: hsla(203, 97%, 65%, 1);
+                margin: 0;
+                width: 20px;
+                height: 20px;
+            }
+
+            .checkbox-for-code-line:not(:checked) + .code-line {
+                text-decoration: line-through;
+            }
+        </style>
+        <pre class="place l">
+        <code class="language-css hljs" data-highlighted="yes">
+        <span class="hljs-selector-class">.container</span> {
+            <label class="label-for-code-line"><input type="checkbox" id="checkbox-for-code-line-1" class="checkbox-for-code-line"><span id="code-line-1" class="code-line"><span class="hljs-attribute">container-type</span>: size;</span></label>
+            <span class="hljs-attribute">display</span>: block;
+            <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid white;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-type-size/index.html" frameborder="0" id="demo-1" class="place r t iframe" style="width: 55%; top: 163px;"></iframe>
+        <script>
+            (() => {
+                const demo = document.getElementById('demo-1');
+      
+                const checkbox = document.getElementById('checkbox-for-code-line-1');
+
+                checkbox.addEventListener('click', (event) => {
+                    const message = event.target.checked ? 'add-container-type' : 'remove-container-type';
+                    demo.contentWindow.postMessage(message);
+                });
+            })();
+            
+        </script>
+    </section>
+
+    <!-- <section class="slide">
+        <h3><code>container-type</code></h3>
+        <ul>
+            <li><code>inline-size</code> – контент не влияет на <span class="accented">inline</span> размер</li>
+            <li><code>size</code> – контент не влияет на <span class="accented">inline</span> и <span class="accented">block</span> размеры</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h3><code>container-type</code></h3>
+        <ul>
+            <li><code>inline-size</code> – контент не влияет на <span class="accented">inline</span> размер</li>
+            <li><code>size</code> – контент не влияет на <span class="accented">inline</span> и <span class="accented">block</span> размеры</li>
+        </ul>
+        <img src="./images/arrow-as-empty-at-all.svg" alt="" class="place t r" style="width: 32%; top: 13%; right: 12%;">
+    </section> -->
+
+    <section class="slide">
+        <img src="./images/scheme-container-size-2.svg" alt="" class="place" style="width: 70%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title" style="line-height: 1.4;">Размеры контейнера <br> === <br> Размерам content-box</h2>
+    </section>
+
+    <section class="slide">
+        <pre class="place l t" style="top: -10px;">
+        <code class="language-css">
+        .container {
+            container-type: inline-size;
+            border: 2px solid white;
+            padding: 20px;
+        }
+
+        .element {
+            background: green;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                background: yellow;
+            }
+        }
+        </code>
+        </pre>
+        <iframe src="./demos/container-width-1/index.html" frameborder="0" class="place r t iframe" style="width: 55%; top: 120px;"></iframe>
     </section>
 
     <section class="slide">
@@ -1339,6 +1581,262 @@
     <section class="slide">
         <img src="./images/screenshot-ahmad-shadeed-cq-guide.jpg" alt="" class="place rounded" style="width: 80%;">
         <a href="https://ishadeed.com/article/css-container-query-guide" class="copyright">Интерактивный гайд по Container Queires</a>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Типографика</h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/card-typography/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Responsive Typography</h2>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .text {
+            font-size: 30px;
+        }
+
+        @container card (width <= 600px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @container card (width <= 400px) {
+            .text {
+                font-size: 18px;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+
+    <!-- <section class="slide">
+        <iframe src="./demos/card-typography-2/index.html" frameborder="0" class="place iframe"></iframe>
+    </section> -->
+
+    <section class="slide">
+        <iframe src="./demos/responsive-typo/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-responsive-typography.svg" alt="" class="place" style="height: 75%;">
+    </section> 
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Fluid Typography</h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/fluid-typo/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-fluid-typography.svg" alt="" class="place" style="height: 75%;">
+    </section> 
+
+    <section class="slide">
+        <pre class="place l" style="left: 25px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .text {
+            font-size: 30px;
+        }
+
+        @container card (width <= 600px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @container card (width <= 400px) {
+            .text {
+                font-size: 18px;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="place l" style="left: 25px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .text {
+            font-size: 30px;
+        }
+
+        @container card (width <= 600px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @container card (width <= 400px) {
+            .text {
+                font-size: 18px;
+            }
+        }
+        </code>
+        </pre>
+        <pre class="place r" style="right: 25px;">
+        <code class="language-css" style="font-size: 0.8em;">
+        .text {
+            font-size: clamp(18px, 20px, 30px);
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Что за <code>clamp()</code>?</h2>
+    </section>
+
+    <section class="slide">
+        <div class="place my-quote" style="width:70%;">
+            <div class="my-quote__title">
+                <code>clamp()</code>
+            </div>
+            <figure>
+                <blockquote>
+                    <p>Позволяет ограничивать диапазон изменения некоего значения, задавая его нижний и верхний пределы.</p>
+                </blockquote>
+                <figcaption>CSS-спецификация</figcaption>
+            </figure>
+        </div>
+        <a href="https://drafts.csswg.org/css-values/#funcdef-clamp" class="copyright">CSS-спецификация: clamp()</a>
+    </section>
+
+    <section class="slide">
+        <div class="browser-support-row">
+            <div class="browser-support-row__item">
+                <div>Chrome</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Firefox</div>
+                <div>✅</div>
+            </div>
+            <div class="browser-support-row__item">
+                <div>Safari</div>
+                <div>✅</div>
+            </div>
+        </div>
+        <a href="https://caniuse.com/?search=clamp%28%29" class="copyright">Can I use: clamp()</a>
+    </section>
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
+    <img src="./images/arrow-max-value.svg" alt="" class="place t l" style="width: 24%; top: 58%; left: 76%;">
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
+    <img src="./images/arrow-max-value.svg" alt="" class="place t l" style="width: 24%; top: 58%; left: 76%;">
+    <img src="./images/arrow-prevered-value.svg" alt="" class="place t l" style="width: 25%; top: 17%; left: 61%;">
+    </section>
+
+    <!-- <section class="slide">
+        <iframe src="./demos/card-typography-3/index.html" frameborder="0" class="place iframe"></iframe>
+    </section> -->
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">18px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">30px</span>)
+    </code>
+    </pre>
+    </section>
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">1.5rem</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-relative-units-better.svg" alt="" class="place" style="width: 54%; top: 27%; left: 68%;">
+    </section>
+
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    </pre>
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    </pre>
+    <img src="./images/arrow-rem-cqw.svg" alt="" class="place" style="width: 46%; top: 34%; left: 56%;">
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    <img src="./images/arrow-more-smooth.svg" alt="" class="place" style="width: 26%; top: 2%; left: 39%;">
+    </pre>
+    </section>
+    <section class="slide">
+    <pre class="place">
+    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
+    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
+    </code>
+    <img src="./images/arrow-more-smooth.svg" alt="" class="place" style="width: 26%; top: 2%; left: 39%;">
+    <img src="./images/arrow-more-predictable.svg" alt="" class="place" style="width: 44%; top: 99%; left: 72%;">
+    </pre>
+
+    </section>
+
+    <section class="slide">
+        <img src="./images/tanya-fokina-fluid-typography.jpeg" alt="" class="place rounded" style="width: 60%;">
+        <a href="https://www.youtube.com/watch?v=kRwLn7iHyD8" class="copyright">Татьяна Фокина: Fluid Typography and CSS clamp()</a>
+    </section>
+
+    <section class="slide section-title">
+        <h2 class="shout">
+            <small>Адаптив</small>
+            Контент
+        </h2>
+    </section>
+
+    <section class="slide">
+        <iframe src="./demos/style-queries-card-with-label/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/style-queries-card-with-label-2/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/arrow-show-label-for-new-cars.svg" alt="" class="place t l" style="width: 43%; top: 4%; left: 18%;">
     </section>
 
     <section class="slide">
@@ -1489,9 +1987,6 @@
         <img src="./images/arrow-for-now-works-only-with-css-custom-properties.svg" alt="" class="place t l" style="width: 31%; top: 67%; left: 61%;">
     </section>
 
-    <section class="slide">
-        <iframe src="./demos/style-queries-card-with-label/index.html" frameborder="0" class="place iframe"></iframe>
-    </section>
     <section class="slide">
         <iframe src="./demos/style-queries-card-with-label-2/index.html" frameborder="0" class="place iframe"></iframe>
         <img src="./images/arrow-show-label-for-new-cars.svg" alt="" class="place t l" style="width: 43%; top: 4%; left: 18%;">
@@ -2175,249 +2670,11 @@
         <a href="https://ishadeed.com/article/css-has-guide/" class="copyright">Интерактивный гайд по :has()</a>
     </section>
 
-    <section class="slide">
-        <h2 class="place centered-slide-title">Типографика</h2>
-    </section>
-
-    <section class="slide">
-        <iframe src="./demos/card-typography/index.html" frameborder="0" class="place iframe"></iframe>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Responsive Typography</h2>
-    </section>
-
-    <section class="slide">
-        <pre class="place">
-        <code class="language-css">
-        .text {
-            font-size: 30px;
-        }
-
-        @container card (width <= 600px) {
-            .text {
-                font-size: 20px;
-            }
-        }
-
-        @container card (width <= 400px) {
-            .text {
-                font-size: 18px;
-            }
-        }
-        </code>
-        </pre>
-    </section>
-
-    <!-- <section class="slide">
-        <iframe src="./demos/card-typography-2/index.html" frameborder="0" class="place iframe"></iframe>
-    </section> -->
-
-    <section class="slide">
-        <iframe src="./demos/responsive-typo/index.html" frameborder="0" class="place iframe"></iframe>
-    </section>
-
-    <section class="slide">
-        <img src="./images/scheme-responsive-typography.svg" alt="" class="place" style="height: 75%;">
-    </section> 
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Fluid Typography</h2>
-    </section>
-
-    <section class="slide">
-        <iframe src="./demos/fluid-typo/index.html" frameborder="0" class="place iframe"></iframe>
-    </section>
-
-    <section class="slide">
-        <img src="./images/scheme-fluid-typography.svg" alt="" class="place" style="height: 75%;">
-    </section> 
-
-    <section class="slide">
-        <pre class="place l" style="left: 25px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .text {
-            font-size: 30px;
-        }
-
-        @container card (width <= 600px) {
-            .text {
-                font-size: 20px;
-            }
-        }
-
-        @container card (width <= 400px) {
-            .text {
-                font-size: 18px;
-            }
-        }
-        </code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <pre class="place l" style="left: 25px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .text {
-            font-size: 30px;
-        }
-
-        @container card (width <= 600px) {
-            .text {
-                font-size: 20px;
-            }
-        }
-
-        @container card (width <= 400px) {
-            .text {
-                font-size: 18px;
-            }
-        }
-        </code>
-        </pre>
-        <pre class="place r" style="right: 25px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .text {
-            font-size: clamp(18px, 20px, 30px);
-        }
-        </code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Что за <code>clamp()</code>?</h2>
-    </section>
-
-    <section class="slide">
-        <div class="place my-quote" style="width:70%;">
-            <div class="my-quote__title">
-                <code>clamp()</code>
-            </div>
-            <figure>
-                <blockquote>
-                    <p>Позволяет ограничивать диапазон изменения некоего значения, задавая его нижний и верхний пределы.</p>
-                </blockquote>
-                <figcaption>CSS-спецификация</figcaption>
-            </figure>
-        </div>
-        <a href="https://drafts.csswg.org/css-values/#funcdef-clamp" class="copyright">CSS-спецификация: clamp()</a>
-    </section>
-
-    <section class="slide">
-        <div class="browser-support-row">
-            <div class="browser-support-row__item">
-                <div>Chrome</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Firefox</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Safari</div>
-                <div>✅</div>
-            </div>
-        </div>
-        <a href="https://caniuse.com/?search=clamp%28%29" class="copyright">Can I use: clamp()</a>
-    </section>
-
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
-    </code>
-    </pre>
-    </section>
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
-    </code>
-    </pre>
-    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
-    </section>
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
-    </code>
-    </pre>
-    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
-    <img src="./images/arrow-max-value.svg" alt="" class="place t l" style="width: 24%; top: 58%; left: 76%;">
-    </section>
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">min</span>, <span class="hljs-number">preferred</span>, <span class="hljs-number">max</span>)
-    </code>
-    </pre>
-    <img src="./images/arrow-min-value.svg" alt="" class="place t l" style="width: 21%; top: 11%; left: 16%;">
-    <img src="./images/arrow-max-value.svg" alt="" class="place t l" style="width: 24%; top: 58%; left: 76%;">
-    <img src="./images/arrow-prevered-value.svg" alt="" class="place t l" style="width: 25%; top: 17%; left: 61%;">
-    </section>
-
-    <!-- <section class="slide">
-        <iframe src="./demos/card-typography-3/index.html" frameborder="0" class="place iframe"></iframe>
-    </section> -->
-
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">18px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">30px</span>)
-    </code>
-    </pre>
-    </section>
-
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">1.5rem</span>, <span class="hljs-number">2rem</span>)
-    </code>
-    </pre>
-    <img src="./images/arrow-relative-units-better.svg" alt="" class="place" style="width: 54%; top: 27%; left: 68%;">
-    </section>
-
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
-    </code>
-    </pre>
-    </section>
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
-    </code>
-    </pre>
-    <img src="./images/arrow-rem-cqw.svg" alt="" class="place" style="width: 46%; top: 34%; left: 56%;">
-    </section>
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
-    </code>
-    <img src="./images/arrow-more-smooth.svg" alt="" class="place" style="width: 26%; top: 2%; left: 39%;">
-    </pre>
-    </section>
-    <section class="slide">
-    <pre class="place">
-    <code class="language-css hljs" style="font-size: 1.8em;" data-highlighted="yes">
-    <span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>, <span class="hljs-number">0.5rem + 3cqw</span>, <span class="hljs-number">2rem</span>)
-    </code>
-    <img src="./images/arrow-more-smooth.svg" alt="" class="place" style="width: 26%; top: 2%; left: 39%;">
-    <img src="./images/arrow-more-predictable.svg" alt="" class="place" style="width: 44%; top: 99%; left: 72%;">
-    </pre>
-
-    </section>
-
-    <section class="slide">
-        <img src="./images/tanya-fokina-fluid-typography.jpeg" alt="" class="place rounded" style="width: 60%;">
-        <a href="https://www.youtube.com/watch?v=kRwLn7iHyD8" class="copyright">Татьяна Фокина: Fluid Typography and CSS clamp()</a>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Logical properties</h2>
+    <section class="slide section-title">
+        <h2 class="shout">
+            <small>Адаптив</small>
+            Окружающая среда
+        </h2>
     </section>
 
     <section class="slide">
@@ -2444,6 +2701,12 @@
         </pre>
     </section>
 
+    <section class="slide">
+        <iframe src="./demos/logical-properties-2-0/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
+    <section class="slide">
+        <iframe src="./demos/logical-properties-2/index.html" frameborder="0" class="place iframe"></iframe>
+    </section>
     <section class="slide">
         <iframe src="./demos/logical-properties-2/index.html" frameborder="0" class="place iframe"></iframe>
         <img src="./images/arrow-russian.svg" alt="" class="place" style="width: 20%; top: 22%; left: 29%;">
@@ -2627,6 +2890,11 @@
         <img src="./images/arrow-japanese.svg" alt="" class="place" style="height: 15%; top: 11%; left: 84%;">
         <div class="place" style="width:100%; height: 100%; background-color: hsla(48, 38%, 3%, 0.75); backdrop-filter: blur(2px);"></div>
         <h2 class="place centered-slide-title" style="top:45%;">Добавлять третью вилку?</h2>
+        <img src="./images/mem-harold-pk-pain.png" alt="" class="place b r" style="height: 35%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Логические свойства</h2>
     </section>
 
     <section class="slide">
@@ -2678,15 +2946,15 @@
     </section>
 
     <section class="slide" style="padding-right: 30px;">
-        <h3>Свойста с логическими эквивалентами</h3>
-        <ul style="columns: 2;">
+        <h3>Свойства с логическими эквивалентами</h3>
+        <ul style="columns: 3;">
+            <li><code>inset</code></li>
+            <li><code>width</code></li>
+            <li><code>height</code></li>
             <li><code>margin</code></li>
             <li><code>padding</code></li>
             <li><code>border</code></li>
             <li><code>border-radius</code></li>
-            <li><code>width</code></li>
-            <li><code>height</code></li>
-            <li><code>inset</code></li>
         </ul>
     </section>
 
@@ -2730,55 +2998,40 @@
         <img src="./images/arrow-3.svg" alt="" class="place" style="width: 8%; top: 8.5%; left: 48%;">
     </section>
 
+    <section class="slide">
+        <pre class="place r" style="right: 70px;">
+        <code class="language-css">
+        .card {
+            position: relative;
+            padding: 20px;
+            padding-inline-end: 70px;
+        }
+
+        .icon {
+            position: absolute;
+            inset-block-start: 20px;
+            inset-inline-end: 20px;
+            inline-size: 40px;
+            block-size: 40px;
+        }
+        </code>
+        </pre>
+    </section>
+
     <!-- <section class="slide">
         <img src="./images/scheme-logical-to-physical.svg" alt="" class="place" style="width: 80%;">
     </section> -->
     <section class="slide">
         <img src="./images/scheme-logical-to-physical-2.svg" alt="" class="place" style="width: 80%;">
     </section>
+    <section class="slide">
+        <img src="./images/scheme-logical-to-physical-2.svg" alt="" class="place" style="width: 80%;">
+        <img src="./images/mem-harold-happy-4.png" alt="" class="place b r" style="height: 43%; bottom: -3%;">
+    </section>
     
     <section class="slide">
         <img src="./images/screenshot-doka-logical-properties.jpg" alt="" class="place rounded" style="width: 70%;">
         <a href="https://doka.guide/css/logical-properties/" class="copyright">Дока: Логические свойства CSS</a>
-    </section> 
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Предпочтения пользователя</h2>
-    </section>
-
-    <section class="slide" style="padding-right: 20px;">
-        <h3><code>@media(пользовательские предпочтения)</code></h3>
-        <ul>
-            <li><code>prefers-color-scheme</code> – светлая / тёмная тема</li>
-            <li><code>prefers-contrast</code> – повышенная / пониженная контрастность</li>
-            <li><code>prefers-reduced-motion</code> – наличие анимаций</li>
-            <li><code>prefers-reduced-transparency</code> – наличие прозрачности</li>
-        </ul>
-    </section>
-
-    <section class="slide">
-        <pre class="place">
-        <code class="language-css">
-        .parallax-scrolling-image {
-            position: sticky;
-        }
-            
-        @media (prefers-reduced-motion: reduce) {
-            .parallax-scrolling-image {
-                position: relative;
-            }
-        }
-        </code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <img src="./images/screenshot-article-about-media-prefers.jpg" alt="" class="place rounded" style="width: 70%;">
-        <a href="https://a11y-blog.dev/ru/articles/css-media-features-for-a11y/" class="copyright">Татьяна Фокина: CSS-медиафичи для улучшения доступности</a>
-    </section>
-    
-    <section class="slide">
-        <h2 class="place centered-slide-title">Anchor Positioning</h2>
     </section>
 
     <section class="slide">
@@ -2787,6 +3040,10 @@
 
     <section class="slide">
         <img src="./images/scheme-adaptive-tooltip.svg" alt="" class="place" style="width: 70%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Anchor Positioning</h2>
     </section>
 
     <section class="slide">
@@ -3057,12 +3314,66 @@
     </section>
 
     <section class="slide">
-        <iframe src="./demos/menu/index.html" frameborder="0" class="place iframe"></iframe>
+        <img src="./images/mem-patrick.jpg" alt="" class="place rounded" style="height: 70%;">
     </section>
+
+    <!-- <section class="slide">
+        <iframe src="./demos/menu/index.html" frameborder="0" class="place iframe"></iframe>
+    </section> -->
 
     <section class="slide">
         <img src="./images/fc-2025-roma-akhmadullin.jpg" alt="" class="place rounded" style="width: 70%;">
         <a href="https://youtu.be/IiBuTd-Llkg" class="copyright">Рома Ахмадуллин: CSS Anchor Positioning</a>
+    </section>
+
+    <section class="slide section-title">
+        <h2 class="shout">
+            <small>Адаптив</small>
+            Предпочтения пользователя
+        </h2>
+    </section>
+
+    <section class="slide">
+        <img src="./images/night-office-young-handsome-man-working-desktop-computer-digital-entrepreneur-typing-code_255667-78431.avif" alt="" class="place" style="height: 100%; width: 100%; object-fit: cover;">
+    </section>
+
+    <section class="slide">
+        <img src="./images/mem-too-bright.jpg" alt="" class="place rounded" style="height: 80%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title"><code>@media(prefers-color-scheme)</code></h2>
+    </section>
+
+    <section class="slide" style="padding-right: 20px;">
+        <h3><code>@media(пользовательские предпочтения)</code></h3>
+        <ul>
+            <li><code>prefers-color-scheme</code> – светлая / тёмная тема</li>
+            <li><code>prefers-contrast</code> – повышенная / пониженная контрастность</li>
+            <li><code>prefers-reduced-motion</code> – наличие анимаций</li>
+            <li><code>prefers-reduced-transparency</code> – наличие прозрачности</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .parallax-scrolling-image {
+            position: sticky;
+        }
+            
+        @media (prefers-reduced-motion: reduce) {
+            .parallax-scrolling-image {
+                position: relative;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <img src="./images/screenshot-article-about-media-prefers.jpg" alt="" class="place rounded" style="width: 70%;">
+        <a href="https://a11y-blog.dev/ru/articles/css-media-features-for-a11y/" class="copyright">Татьяна Фокина: CSS-медиафичи для улучшения доступности</a>
     </section>
 
     <!-- <section class="slide">
