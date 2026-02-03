@@ -185,12 +185,6 @@
         <div class="block-placeholder mb-20"></div>
     </div>
     <script>
-        window.addEventListener('focus', (e) => {
-            e.preventDefault();
-            e.target.focus({preventScroll: true});
-        });
-    </script>
-    <script>
         const infoButton = document.querySelector('#info-button');
         const tooltip = document.querySelector('#tooltip');
 
@@ -199,6 +193,13 @@
                 tooltip.classList.toggle('tooltip-visible');
             });
         }
+
+        [document, window, infoButton, tooltip].forEach((el) => {
+            el.addEventListener('focus', (e) => {
+                e.preventDefault();
+                e.target.focus({preventScroll: true});
+            });
+        })
     </script>
 </body>
 </html>
