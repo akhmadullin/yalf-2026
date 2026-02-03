@@ -75,6 +75,12 @@
             height: 100%;
         }
 
+        .input-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         .input-range-wrapper {
             display: flex;
             gap: 10px;
@@ -84,16 +90,16 @@
     <div class="layout">
         <div class="controls">
             <div class="inputs">
-                <div>
-                    <label for="width-input">width</label><br>
+                <div class="input-row">
+                    <label for="width-input">width</label>
                     <div class="input-range-wrapper">
                         <span>300px</span>
                         <input type="range" id="width-input" min="300" max="750" step="5" value="400">
                         <span>800px</span>
                     </div>
                  </div>
-                 <div>
-                    <label for="padding-input">padding</label><br>
+                 <div class="input-row">
+                    <label for="padding-input">padding</label>
                     <div class="input-range-wrapper">
                         <span>5cqw</span>
                         <input type="range" id="padding-input" min="5" max="25" step="1" value="7">
