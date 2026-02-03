@@ -320,11 +320,19 @@
             margin-bottom: 10px;
             display: block;
         }
+
+        .line-throughed {
+            text-decoration: line-through;
+        }
+
+        .baseline {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
     </style>
 </head>
 
 <body class="shower list">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/baseline-status@1/baseline-status.min.js" type="module"></script> -->
+    <script src="./lib/baseline-status/index.min.js" type="module"></script>
      
     <header class="caption">
         <h1 style="margin-bottom: 10px;">По-настоящему адаптивный интерфейс</h1>
@@ -740,7 +748,7 @@
         <a href="https://drafts.csswg.org/css-conditional-5/#container-queries" class="copyright">CSS-спецификация: Container Queries</a>
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <div class="browser-support-row">
             <div class="browser-support-row__item">
                 <div>Chrome</div>
@@ -755,6 +763,10 @@
                 <div>✅</div>
             </div>
         </div>
+        <a href="https://caniuse.com/css-container-queries" class="copyright">Can I use: Container Queries</a>
+    </section> -->
+    <section class="slide">
+        <baseline-status featureid="container-queries" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-container-queries" class="copyright">Can I use: Container Queries</a>
     </section>
 
@@ -950,20 +962,20 @@
     </section>
     <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
-            <code class="language-css">
-                .container {
-                    container-name: card;
-                    container-type: inline-size;
-                    container: card / inline-size;
+            <code class="language-css hljs" data-highlighted="yes">
+                <span class="hljs-selector-class">.container</span> {
+                    <span class="muted line-throughed"><span class="hljs-attribute">container-name</span>: card;</span>
+                    <span class="muted line-throughed"><span class="hljs-attribute">container-type</span>: inline-size;</span>
+                    <span class="hljs-attribute">container</span>: card / inline-size;
                 }
 
-                .element {
-                    color: blue;
+                <span class="hljs-selector-class">.element</span> {
+                    <span class="hljs-attribute">color</span>: blue;
                 }
 
-                @container card (width <= 200px) {
-                    .element {
-                        color: green;
+                <span class="hljs-keyword">@container</span> card (<span class="hljs-attribute">width</span> &lt;= <span class="hljs-number">200px</span>) {
+                    <span class="hljs-selector-class">.element</span> {
+                        <span class="hljs-attribute">color</span>: green;
                     }
                 }
             </code>
@@ -971,20 +983,20 @@
     </section>
     <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
-            <code class="language-css">
-                .container {
-                    container-name: card;
-                    container-type: inline-size;
-                    container: card / inline-size;
+            <code class="language-css hljs" data-highlighted="yes">
+                <span class="hljs-selector-class">.container</span> {
+                    <span class="muted line-throughed"><span class="hljs-attribute">container-name</span>: card;</span>
+                    <span class="muted line-throughed"><span class="hljs-attribute">container-type</span>: inline-size;</span>
+                    <span class="hljs-attribute">container</span>: card / inline-size;
                 }
 
-                .element {
-                    color: blue;
+                <span class="hljs-selector-class">.element</span> {
+                    <span class="hljs-attribute">color</span>: blue;
                 }
 
-                @container card (width <= 200px) {
-                    .element {
-                        color: green;
+                <span class="hljs-keyword">@container</span> card (<span class="hljs-attribute">width</span> &lt;= <span class="hljs-number">200px</span>) {
+                    <span class="hljs-selector-class">.element</span> {
+                        <span class="hljs-attribute">color</span>: green;
                     }
                 }
             </code>
@@ -1581,6 +1593,7 @@
     <section class="slide">
         <img src="./images/screenshot-ahmad-shadeed-cq-guide.jpg" alt="" class="place rounded" style="width: 80%;">
         <a href="https://ishadeed.com/article/css-container-query-guide" class="copyright">Интерактивный гайд по Container Queires</a>
+        <img src="./images/what-to-read-5.png" alt="" class="place b l" style="height: 35%;">
     </section>
 
     <section class="slide">
@@ -1711,7 +1724,7 @@
         <a href="https://drafts.csswg.org/css-values/#funcdef-clamp" class="copyright">CSS-спецификация: clamp()</a>
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <div class="browser-support-row">
             <div class="browser-support-row__item">
                 <div>Chrome</div>
@@ -1727,7 +1740,12 @@
             </div>
         </div>
         <a href="https://caniuse.com/?search=clamp%28%29" class="copyright">Can I use: clamp()</a>
+    </section> -->
+    <section class="slide">
+        <baseline-status featureid="min-max-clamp" class="place baseline"></baseline-status>
+        <a href="https://caniuse.com/?search=clamp%28%29" class="copyright">Can I use: clamp()</a>
     </section>
+
 
     <section class="slide">
     <pre class="place">
@@ -1822,6 +1840,7 @@
     <section class="slide">
         <img src="./images/tanya-fokina-fluid-typography.jpeg" alt="" class="place rounded" style="width: 60%;">
         <a href="https://www.youtube.com/watch?v=kRwLn7iHyD8" class="copyright">Татьяна Фокина: Fluid Typography and CSS clamp()</a>
+        <img src="./images/what-to-read-5.png" alt="" class="place b l" style="height: 35%;">
     </section>
 
     <section class="slide section-title">
@@ -1858,7 +1877,7 @@
         <a href="https://drafts.csswg.org/css-conditional-5/#style-container" class="copyright">CSS-спецификация: Style Queries</a>
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <div class="browser-support-row">
             <div class="browser-support-row__item">
                 <div>Chrome</div>
@@ -1873,6 +1892,10 @@
                 <div>⚠️</div>
             </div>
         </div>
+        <a href="https://caniuse.com/css-container-queries-style" class="copyright">Can I use: Style Queries</a>
+    </section> -->
+    <section class="slide">
+        <baseline-status featureid="container-style-queries" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-container-queries-style" class="copyright">Can I use: Style Queries</a>
     </section>
 
@@ -2192,7 +2215,7 @@
         <a href="https://drafts.csswg.org/selectors/#relational" class="copyright">CSS-спецификация: :has()</a>
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <div class="browser-support-row">
             <div class="browser-support-row__item">
                 <div>Chrome</div>
@@ -2207,6 +2230,10 @@
                 <div>✅</div>
             </div>
         </div>
+        <a href="https://caniuse.com/css-has" class="copyright">Can I use: :has()</a>
+    </section> -->
+    <section class="slide">
+        <baseline-status featureid="has" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-has" class="copyright">Can I use: :has()</a>
     </section>
 
@@ -2668,6 +2695,7 @@
     <section class="slide">
         <img src="./images/screenshot-ahmad-shadeed-has-guide.jpg" alt="" class="place rounded" style="width: 80%;">
         <a href="https://ishadeed.com/article/css-has-guide/" class="copyright">Интерактивный гайд по :has()</a>
+        <img src="./images/what-to-read-5.png" alt="" class="place b l" style="height: 35%;">
     </section>
 
     <section class="slide section-title">
@@ -2749,7 +2777,7 @@
         </code>
         </pre>
     </section>
-    <section class="slide">
+    <!-- <section class="slide">
         <pre class="place l" style="left: 100px;">
         <code class="language-css">
         html[dir="ltr"] .card {
@@ -2786,7 +2814,7 @@
         </pre>
         <img src="./images/arrow-left-right.svg" alt="" class="place" style="width: 20%; top: 8%; left: 27%;">
         <img src="./images/line-1.svg" alt="" class="place" style="width: 13%; top: 20%; left: 25%;">
-    </section>
+    </section> -->
     <section class="slide">
         <pre class="place l" style="left: 100px;">
         <code class="language-css">
@@ -2912,7 +2940,7 @@
         <a href="https://www.w3.org/TR/css-logical-1/" class="copyright">CSS-спецификация: Логические свойства</a>
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <div class="browser-support-row">
             <div class="browser-support-row__item">
                 <div>Chrome</div>
@@ -2927,6 +2955,10 @@
                 <div>✅</div>
             </div>
         </div>
+        <a href="https://caniuse.com/css-logical-props" class="copyright">Can I use: Logical properties</a>
+    </section> -->
+    <section class="slide">
+        <baseline-status featureid="logical-properties" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-logical-props" class="copyright">Can I use: Logical properties</a>
     </section>
 
@@ -3032,6 +3064,7 @@
     <section class="slide">
         <img src="./images/screenshot-doka-logical-properties.jpg" alt="" class="place rounded" style="width: 70%;">
         <a href="https://doka.guide/css/logical-properties/" class="copyright">Дока: Логические свойства CSS</a>
+        <img src="./images/what-to-read-5.png" alt="" class="place b l" style="height: 35%;">
     </section>
 
     <section class="slide">
@@ -3061,7 +3094,7 @@
         <a href="https://www.w3.org/TR/css-anchor-position-1/" class="copyright">CSS-спецификация: anchor positioning</a>
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <div class="browser-support-row">
             <div class="browser-support-row__item">
                 <div>Chrome</div>
@@ -3076,6 +3109,10 @@
                 <div>✅</div>
             </div>
         </div>
+        <a href="https://caniuse.com/css-anchor-positioning" class="copyright">Can I use: Anchor Positioning</a>
+    </section> -->
+    <section class="slide">
+        <baseline-status featureid="anchor-positioning" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-anchor-positioning" class="copyright">Can I use: Anchor Positioning</a>
     </section>
 
@@ -3174,7 +3211,7 @@
         <iframe src="./demos/tooltip-0-0/index.html" frameborder="0" class="place iframe"></iframe>
     </section>
 
-    <section class="slide">
+    <!-- <section class="slide">
         <pre class="place">
         <code class="language-css">
         .tooltip::before {
@@ -3184,7 +3221,7 @@
         }
         </code>
         </pre>
-    </section>
+    </section> -->
     <section class="slide">
         <pre class="place">
         <code class="language-css">
@@ -3324,6 +3361,7 @@
     <section class="slide">
         <img src="./images/fc-2025-roma-akhmadullin.jpg" alt="" class="place rounded" style="width: 70%;">
         <a href="https://youtu.be/IiBuTd-Llkg" class="copyright">Рома Ахмадуллин: CSS Anchor Positioning</a>
+        <img src="./images/what-to-read-5.png" alt="" class="place b l" style="height: 35%;">
     </section>
 
     <section class="slide section-title">
@@ -3342,11 +3380,94 @@
     </section>
 
     <section class="slide">
-        <h2 class="place centered-slide-title"><code>@media(prefers-color-scheme)</code></h2>
+        <h2 class="place centered-slide-title"><code>@media (prefers-color-scheme)</code></h2>
+    </section>
+
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .page {
+            background: white;
+            color: black;
+        }
+            
+        @media (prefers-color-scheme: dark) {
+            .page {
+                background: black;
+                color: white;
+            }
+        }
+        </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .page {
+            background: white;
+            color: black;
+        }
+            
+        @media (prefers-color-scheme: dark) {
+            .page {
+                background: black;
+                color: white;
+            }
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-light-theme.svg" alt="" class="place l" style="width: 23%; top: 27%; left: 2%;">
+    </section>
+    <section class="slide">
+        <pre class="place">
+        <code class="language-css">
+        .page {
+            background: white;
+            color: black;
+        }
+            
+        @media (prefers-color-scheme: dark) {
+            .page {
+                background: black;
+                color: white;
+            }
+        }
+        </code>
+        </pre>
+        <img src="./images/arrow-light-theme.svg" alt="" class="place l" style="width: 23%; top: 27%; left: 2%;">
+        <img src="./images/arrow-dark-theme.svg" alt="" class="place l" style="width: 23%; top: 61%; left: 2%;">
+    </section>
+
+    <section class="slide">
+        <h2 class="place centered-slide-title">Можем учитывать не только тему</h2>
     </section>
 
     <section class="slide" style="padding-right: 20px;">
-        <h3><code>@media(пользовательские предпочтения)</code></h3>
+        <h3><code>@media (пользовательские предпочтения)</code></h3>
+        <ul>
+            <li class="muted"><code>prefers-color-scheme</code> – светлая / тёмная тема</li>
+            <li><code>prefers-contrast</code> – повышенная / пониженная контрастность</li>
+        </ul>
+    </section>
+    <section class="slide" style="padding-right: 20px;">
+        <h3><code>@media (пользовательские предпочтения)</code></h3>
+        <ul>
+            <li class="muted"><code>prefers-color-scheme</code> – светлая / тёмная тема</li>
+            <li class="muted"><code>prefers-contrast</code> – повышенная / пониженная контрастность</li>
+            <li><code>prefers-reduced-motion</code> – наличие анимаций</li>
+        </ul>
+    </section>
+    <section class="slide" style="padding-right: 20px;">
+        <h3><code>@media (пользовательские предпочтения)</code></h3>
+        <ul>
+            <li class="muted"><code>prefers-color-scheme</code> – светлая / тёмная тема</li>
+            <li class="muted"><code>prefers-contrast</code> – повышенная / пониженная контрастность</li>
+            <li class="muted"><code>prefers-reduced-motion</code> – наличие анимаций</li>
+            <li><code>prefers-reduced-transparency</code> – наличие прозрачности</li>
+        </ul>
+    </section>
+    <section class="slide" style="padding-right: 20px;">
+        <h3><code>@media (пользовательские предпочтения)</code></h3>
         <ul>
             <li><code>prefers-color-scheme</code> – светлая / тёмная тема</li>
             <li><code>prefers-contrast</code> – повышенная / пониженная контрастность</li>
@@ -3356,29 +3477,10 @@
     </section>
 
     <section class="slide">
-        <pre class="place">
-        <code class="language-css">
-        .parallax-scrolling-image {
-            position: sticky;
-        }
-            
-        @media (prefers-reduced-motion: reduce) {
-            .parallax-scrolling-image {
-                position: relative;
-            }
-        }
-        </code>
-        </pre>
-    </section>
-
-    <section class="slide">
         <img src="./images/screenshot-article-about-media-prefers.jpg" alt="" class="place rounded" style="width: 70%;">
         <a href="https://a11y-blog.dev/ru/articles/css-media-features-for-a11y/" class="copyright">Татьяна Фокина: CSS-медиафичи для улучшения доступности</a>
+        <img src="./images/what-to-read-5.png" alt="" class="place b l" style="height: 35%;">
     </section>
-
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">💪🏻 CSS могёт!</h2>
-    </section> -->
 
     <section class="slide">
         <h2 class="place centered-slide-title">Подытожим</h2>
