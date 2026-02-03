@@ -11,7 +11,7 @@
 <body>
     <style>
         :root {
-            --placeholer-background: #1f71c2;
+            --placeholer-background: #b9b9b9;
             --border-radius-size: 6px;
         }
 
@@ -29,7 +29,7 @@
         }
 
         body {
-            background-color: rgb(22, 22, 22);
+            background-color: #3a3d42;
         }
 
 
@@ -89,15 +89,15 @@
             padding: 0;
             width: 30px;
             height: 30px;
-            background-color: #000;
+            background-color: #fff;
             border-radius: 50%;
             cursor: pointer;
             position: relative;
         }
 
         .info-button-icon {
-            /* background-color: rgb(28, 132, 192); */
-            background-color: #ffd139;
+            background-color: rgb(28, 132, 192);
+            /* background-color: #ffd139; */
             mask-image: url(./assets/info.svg);
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
@@ -124,9 +124,9 @@
             position: absolute;
             min-width: 190px;
             max-width: calc(100% - 40px);
-            /* background-color: rgb(28, 132, 192); */
-            background-color: #ffd139;
-            color: #000;
+            background-color: rgb(28, 132, 192);
+            /* background-color: #ffd139; */
+            color: #fff;
             font-weight: bold;
             text-align: center;
             padding: 5px 8px;
@@ -142,8 +142,8 @@
             position: absolute;
             border-width: 5px;
             border-style: solid;
-            /* border-color: rgb(28, 132, 192) transparent transparent transparent; */
-            border-color: #ffd139 transparent transparent transparent;
+            border-color: rgb(28, 132, 192) transparent transparent transparent;
+            /* border-color: #ffd139 transparent transparent transparent; */
             right: 20px;
             bottom: -9px;
         }
@@ -170,7 +170,7 @@
                 <div class="info-button" id="info-button">
                     <span class="info-button-icon"></span>
                 </div>
-                <div class="tooltip" id="tooltip">Не адаптируюсь под положение скрола :(</div>
+                <div class="tooltip" id="tooltip">Не адаптируюсь под положение скрола 🥲</div>
             </div>
         </div>
         <div class="block-placeholder mb-20"></div>
@@ -184,6 +184,12 @@
         <div class="subtitle-placeholder mb-20"></div>
         <div class="block-placeholder mb-20"></div>
     </div>
+    <script>
+        window.addEventListener('focus', (e) => {
+            e.preventDefault();
+            e.target.focus({preventScroll: true});
+        });
+    </script>
     <script>
         const infoButton = document.querySelector('#info-button');
         const tooltip = document.querySelector('#tooltip');
