@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'PT Sans Caption';
+    font-family: 'YS Text';
     font-weight: 400;
     font-display: swap;
-    src: url(../../fonts/PT_Sans/pt-sans_caption-regular.woff2)
+    src: url(../../fonts/YS/YandexSansText-Regular.woff2)
         format("woff2");
 }
 
 @font-face {
-    font-family: 'PT Sans Caption';
+    font-family: 'YS Text';
     font-weight: 700;
     font-display: swap;
-    src: url(../../fonts/PT_Sans/pt-sans_caption-bold.woff2)
+    src: url(../../fonts/YS/YandexSansText-Bold.woff2)
         format("woff2");
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 * {
-    font-family: 'PT Sans Caption', system-ui, sans-serif;
+    font-family: 'YS Text', system-ui, sans-serif;
 }
 
 code {
