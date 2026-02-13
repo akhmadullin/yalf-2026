@@ -8,34 +8,6 @@
     <link rel="stylesheet" href="./lib/highlight/styles/vs2015.min.css">
     <style>
         @font-face {
-            font-family: 'Montserrat';
-            font-weight: 400;
-            src: url(./fonts/Montserrat/Montserrat-Regular.woff2)
-                format("woff2");
-        }
-
-        @font-face {
-            font-family: 'Montserrat';
-            font-weight: 600;
-            src: url(./fonts/Montserrat/Montserrat-SemiBold.woff2)
-                format("woff2");
-        }
-
-        @font-face {
-            font-family: 'Montserrat';
-            font-weight: 700;
-            src: url(./fonts/Montserrat/Montserrat-Bold.woff2)
-                format("woff2");
-        }
-
-        @font-face {
-            font-family: 'Montserrat';
-            font-weight: 900;
-            src: url(./fonts/Montserrat/Montserrat-Black.woff2)
-                format("woff2");
-        }
-
-        @font-face {
             font-family: 'YS Display';
             font-weight: 400;
             src: url(./fonts/YS/YandexSansDisplay-Regular.woff2)
@@ -158,19 +130,6 @@
         .accented {
             color: #fcd03c;
         }
-
-        /* table tbody tr td:first-child {
-            font-size: 1em;
-        }
-
-        .slide tr:not(:last-of-type) > * {
-            background-image: linear-gradient(to top, var(--color-line) 0.1em, transparent 0.1em);
-            background-repeat: repeat-x;
-        }
-
-        .slide td.td-with-icon {
-            text-align: center;
-        } */
 
         .light-image {
             filter: brightness(0.9);
@@ -426,6 +385,103 @@
             width: 75px;
             height: auto;
         }
+
+        .the-end-2 {
+            background-color: #1b1b1b;
+            padding: 45px;
+            padding-bottom: 45px;
+            display: grid;
+            grid-template-columns: 1.9fr 1.1fr;
+            gap: 30px 20px;
+
+        }
+
+        .the-end-2-bio-block {
+            background-color: #000000;
+            border-radius: 22px;
+            padding: 33px;
+            padding-top: 66px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2 {
+                font-weight: 400;
+                font-size: 60px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .the-end-2-bio-block__secondary-text {
+            color: #7e7e7e;
+            font-size: 23px;
+        }
+
+        .the-end-2-tg-block {
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 33px;
+
+            img {
+                width: 100%;
+            }
+
+            a {
+                color: #000000;
+                line-height: 1;
+                text-decoration: none;
+                background-image: none;
+            }
+
+            a:hover {
+                color: #ce2424;
+            }
+        }
+
+        .the-end-2__bio {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            line-height: 1;
+            font-size: 16px;
+            color: #7e7e7e;
+
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 35%;
+            }
+
+            h3 {
+                margin: 0;
+                margin-bottom: 10px;
+                font-size: 22px;
+                font-weight: 400;
+                color: #ffffff;
+            }
+        }
+
+        .the-end-2-conf-colonctitum {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .the-end-2__conf-name {
+            font-size: 10px;
+            color: #7e7e7e;
+        }
     </style>
 </head>
 
@@ -457,7 +513,7 @@
         </div>
     </section>
 
-    <section class="slide about-me">
+    <section id="about-me-1" class="slide about-me">
         <div class="place l" style="padding-left: 50px;">
             <img src="./images/roma-akmadullin.jpg" style="height: 280px; border-radius: 35%;" />
         </div>
@@ -468,10 +524,10 @@
             </ul>
         </div>
     </section>
-    <section class="slide about-me">
+    <section id="about-me-2" class="slide about-me">
         <img src="./images/screenshot-drom-home-page.jpg" alt="" class="place rounded" style="width: 80%;">
     </section>
-    <section class="slide about-me">
+    <section id="about-me-3" class="slide about-me">
         <div class="place l" style="padding-left: 50px;">
             <img src="./images/roma-akmadullin.jpg" style="height: 280px; border-radius: 35%;" />
         </div>
@@ -483,7 +539,10 @@
             </ul>
         </div>
     </section>
-    <section class="slide about-me">
+    <section id="about-me-4" class="slide about-me">
+        <img src="./images/screenshot-doka.jpg" alt="" class="place rounded" style="width: 80%;">
+    </section>
+    <section id="about-me-5" class="slide about-me">
         <div class="place l" style="padding-left: 50px;">
             <img src="./images/roma-akmadullin.jpg" style="height: 280px; border-radius: 35%;" />
         </div>
@@ -496,7 +555,7 @@
             </ul>
         </div>
     </section>
-    <section class="slide about-me">
+    <section id="about-me-6" class="slide about-me">
         <div class="place l" style="padding-left: 50px;">
             <img src="./images/roma-akmadullin.jpg" style="height: 280px; border-radius: 35%;" />
         </div>
@@ -530,14 +589,6 @@
         <img src="./images/scheme-site-com.svg" alt="" class="place t" style="width: 45%; top: 11%; left: 54%;">
     </section>
 
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">Адаптивный интерфейс</h2>
-    </section> -->
-
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">Responsive Web Design</h2>
-    </section> -->
-
     <section class="slide">
         <img src="./images/screenshot-article-responsive-web-design.jpg" alt="" class="place rounded" style="height: 80%;">
         <a href="https://alistapart.com/article/responsive-web-design/" class="copyright">Responsive Web Design</a>
@@ -546,34 +597,6 @@
     <section class="slide">
         <img src="./images/responsive-design-screens.svg" alt="" class="place" style="width: 80%;">
     </section>
-
-    <!-- <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
-        <ul>
-            <li>вьюпорт</li>
-        </ul>
-    </section> -->
-
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">Проблема</h2>
-    </section> -->
-
-
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">✌🏻 Две проблемы</h2>
-    </section>
-
-    <section class="slide">
-        <img src="./images/responsive-design-screens.svg" alt="" class="place" style="width: 80%;">
-    </section>
-    <section class="slide">
-        <img src="./images/responsive-design-screens.svg" alt="" class="place" style="width: 80%;">
-        <img src="./images/arrow-semi-screen-sizes.svg" alt="" class="place" style="width: 37%; top: 22%; left: 60%;">
-    </section>
-
-    <section class="slide">
-        тут еще пара слайдов про первую проблему
-    </section> -->
 
     <section class="slide">
         <h2 class="place centered-slide-title">Брейкпоинты</h2>
@@ -587,16 +610,9 @@
         <h2 class="place centered-slide-title">Компоненты</h2>
     </section>
 
-    <!-- <section class="slide">
-        <img src="./images/screenshot-components-lights-2.jpg" alt="" class="place rounded" style="height:80%;">
-    </section> -->
     <section class="slide">
         <img src="./images/screenshot-components-2.png" alt="" class="place" style="height:80%; filter: drop-shadow(2px 4px 100px #829ce8);">
     </section>
-
-    <!-- <section class="slide">
-        <img src="./images/screenshot-components-lights-3.png" alt="" class="place rounded" style="height:80%;">
-    </section> -->
 
     <section class="slide">
         <img src="./images/components-as-bricks.svg" alt="" class="place" style="width: 80%;">
@@ -605,10 +621,6 @@
     <section class="slide">
         <img src="./images/component-can-be-used-in-different-screens.svg" alt="" class="place" style="height: 70%; margin-top: -3%;">
     </section>
-
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title" style="line-height: 1.2;">Компонент должен выглядеть хорошо везде</h2>
-    </section> -->
 
     <section class="slide">
         <h2 class="place centered-slide-title">Компоненту не важен вьюпорт</h2>
@@ -621,10 +633,6 @@
     <section class="slide">
         <h2 class="place centered-slide-title">🤔 Что нужно учесть?</h2>
     </section>
-
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">Адаптив — не только про вьюпорт?</h2>
-    </section> -->
 
     <section class="slide">
         <iframe src="./demos/adaptive-to-content-one-card/index.html" frameborder="0" class="place iframe"></iframe>
@@ -800,10 +808,6 @@
         </ul>
     </section>
 
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">Адаптив — не только про вьюпорт?</h2>
-    </section> -->
-
     <section class="slide">
         <img src="./images/mem-pen-pineapple.png" alt="" class="place b" style="height: 80%;">
         <h3 class="place t" style="top: 7%; left: 53%;">Адаптив</h3>
@@ -826,44 +830,9 @@
         <img src="./images/arrow-components.svg" alt="" class="place" style="width: 26%; left: 85%; top: 48%;">
     </section>
 
-    <!-- <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
-        <ul>
-            <li>вьюпорт</li>
-            <li>контент</li>
-            <li>размеры контейнера</li>
-            <li>окружающую среду</li>
-            <li>предпочтения пользователя</li>
-        </ul>
-    </section> -->
-
     <section class="slide">
         <h2 class="place centered-slide-title">🪛 Как реализовать?</h2>
     </section>
-
-    <!-- <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
-        <ul>
-            <li>вьюпорт</li>
-            <li>контент</li>
-            <li>размеры контейнера</li>
-            <li>окружающую среду</li>
-            <li>предпочтения пользователя</li>
-        </ul>
-        <img src="./images/arrow-we-can-work.svg" alt="" class="place t" style="width: 41%; top: 26%; left: 44%;">
-    </section>
-    <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
-        <ul>
-            <li>вьюпорт</li>
-            <li>контент</li>
-            <li>размеры контейнера</li>
-            <li>окружающую среду</li>
-            <li>предпочтения пользователя</li>
-        </ul>
-        <img src="./images/arrow-we-can-work.svg" alt="" class="place t" style="width: 41%; top: 26%; left: 44%;">
-        <img src="./images/what-to-do-with-this.svg" alt="" class="place b" style="width: 43%; bottom: 32%; left: 66%;">
-    </section> -->
 
     <section class="slide">
         <img src="./images/scheme-adaptiveness-timeline-0.svg" alt="" class="place" style="width: 80%; margin-top: -20px;">
@@ -891,10 +860,6 @@
         </h2>
     </section>
 
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">💅🏼 Чем порадует CSS?</h2>
-    </section> -->
-
     <section class="slide">
         <h2 class="place centered-slide-title">Container queries</h2>
     </section>
@@ -914,23 +879,6 @@
         <a href="https://drafts.csswg.org/css-conditional-5/#container-queries" class="copyright">CSS-спецификация: Container Queries</a>
     </section>
 
-    <!-- <section class="slide">
-        <div class="browser-support-row">
-            <div class="browser-support-row__item">
-                <div>Chrome</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Firefox</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Safari</div>
-                <div>✅</div>
-            </div>
-        </div>
-        <a href="https://caniuse.com/css-container-queries" class="copyright">Can I use: Container Queries</a>
-    </section> -->
     <section class="slide">
         <baseline-status featureid="container-queries" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-container-queries" class="copyright">Can I use: Container Queries</a>
@@ -1043,7 +991,7 @@
         <img src="./images/arrow-default-styles.svg" alt="" class="place" style="width: 31%; left: 77%; top: 43%;">
         <img src="./images/arrow-custom-styles.svg" alt="" class="place" style="width: 26%; left: 20%; top: 71%;">
     </section>
-    <section class="slide">
+    <!-- <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css">
                 .container {
@@ -1061,7 +1009,7 @@
                 }
             </code>
         </pre>
-    </section>
+    </section> -->
 
     <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
@@ -1126,6 +1074,26 @@
         <img src="./images/arrow-can-define-name-to-container.svg" alt="" class="place t r" style="width: 22%; top: 2%; right: 9%;">
         <img src="./images/arrow-link-to-name.svg" alt="" class="place t r" style="width: 31%; top: 44%; right: 14%;">
     </section>
+    <!-- <section class="slide">
+        <pre class="place t l" style="left: 220px; top: 20px;">
+            <code class="language-css">
+                .container {
+                    container-name: card;
+                    container-type: inline-size;
+                }
+
+                .element {
+                    color: blue;
+                }
+
+                @container card (width <= 200px) {
+                    .element {
+                        color: green;
+                    }
+                }
+            </code>
+        </pre>
+    </section> -->
     <section class="slide">
         <pre class="place t l" style="left: 220px; top: 20px;">
             <code class="language-css hljs" data-highlighted="yes">
@@ -1199,334 +1167,6 @@
             <li><code>size</code> — следим за <span class="accented">inline</span> и <span class="accented">block</span> осями</li>
         </ul>
     </section>
-
-
-    <!-- <section class="slide">
-        <pre class="place l t" style="top: 25px; left: 20px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .container {
-            display: inline-block;
-            border: 2px solid green;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                color: yellow;
-            }
-        }
-        
-        @container (height <= 150px) {
-            .element {
-                font-style: italic;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-type/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Почему так происходит?</h2>
-    </section>
-
-    <section class="slide">
-        <h3><code>container-type</code></h3>
-        <ul>
-            <li><code>normal</code> — дефолтное значение</li>
-            <li><code>inline-size</code> — следим за <i>inline</i> осью</li>
-            <li><code>size</code> — следим за <i>inline</i> и <i>block</i> осями</li>
-        </ul>
-    </section>
-
-    <section class="slide" style="padding-right: 20px;">
-        <h3><code>container-type</code></h3>
-        <ul>
-            <li><code>normal</code> — дефолтное значение</li>
-            <li><code>inline-size</code> — применяет layout, style и <i>inline-size containment</i></li>
-            <li><code>size</code> — применяет layout, style и <i>size containment</i></li>
-        </ul>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">🤔 Что за containment?</h2>
-    </section>
-
-    <section class="slide">
-        <div class="place my-quote" style="width:66%;">
-            <div class="my-quote__title">
-                Containment
-            </div>
-            <figure>
-                <blockquote>
-                    <p>Делает элемент и его содержимое независимыми от остального документа, позволяя браузеру оптимизировать отрисовку страницы.</p>
-                </blockquote>
-                <figcaption>CSS-спецификация</figcaption>
-            </figure>
-        </div>
-        <a href="https://drafts.csswg.org/css-contain-2/#contain-property" class="copyright">CSS-спецификация: Containment</a>
-    </section>
-
-    <section class="slide">
-        <img src="./images/scheme-container-grows-1.svg" alt="" class="place" style="width: 80%;">
-    </section>
-    <section class="slide">
-        <img src="./images/scheme-container-grows-2.svg" alt="" class="place" style="width: 80%;">
-    </section>
-    <section class="slide">
-        <img src="./images/scheme-container-grows-3.svg" alt="" class="place" style="width: 80%;">
-    </section>
-    <section class="slide">
-        <img src="./images/scheme-container-grows-4.svg" alt="" class="place" style="width: 80%;">
-    </section>
-    <section class="slide">
-        <img src="./images/scheme-container-grows-5.svg" alt="" class="place" style="width: 80%;">
-    </section>
-
-    <section class="slide">
-        <img src="./images/slpc-pipeline.svg" alt="" class="place" style="width: 80%;">
-        <a href="https://web.dev/articles/rendering-performance" class="copyright">Rendering pipeline</a>
-    </section>
-
-    <section class="slide">
-        <img src="./images/sheme-dom-contain-1.svg" alt="" class="place" style="width: 80%;">
-    </section>
-    <section class="slide">
-        <img src="./images/sheme-dom-contain-2.svg" alt="" class="place" style="width: 80%;">
-    </section>
-    <section class="slide">
-        <img src="./images/sheme-dom-contain-2.svg" alt="" class="place" style="width: 80%;">
-        <img src="./images/arrow-contain-and-dom.svg" alt="" class="place t r" style="width: 34%; right: 1%; top: 15%;">
-    </section>
-
-    <section class="slide">
-        <img src="./images/article-about-contain.jpg" alt="" class="place rounded" style="width: 80%;">
-        <a href="https://www.smashingmagazine.com/2019/12/browsers-containment-css-contain-property/" class="copyright">Rachel Andrew: Статья про contain</a>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title" style="font-size: 44px;">Сontainment API 👉🏻 Container Queries</h2>
-    </section>
-
-    <section class="slide">
-        <img src="./images/scheme-infinite-resize-1.svg" alt="" class="place" style="height: 60%;">
-    </section>
-    <section class="slide">
-        <img src="./images/scheme-infinite-resize-2.svg" alt="" class="place" style="height: 60%;">
-    </section>
-    <section class="slide">
-        <img src="./images/scheme-infinite-resize-3.svg" alt="" class="place" style="height: 60%;">
-    </section>
-    <section class="slide">
-        <img src="./images/scheme-infinite-resize-4.svg" alt="" class="place" style="height: 60%;">
-    </section>
-
-    <section class="slide">
-        <pre class="place l t" style="top: 25px; left: 20px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .container {
-            display: inline-block;
-            border: 2px solid green;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                color: yellow;
-            }
-        }
-        
-        @container (height <= 150px) {
-            .element {
-                font-style: italic;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-type-1/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Как сделать красиво?</h2>
-    </section>
-
-    <section class="slide">
-        <h3><code>container-type</code></h3>
-        <ul>
-            <li><code>inline-size</code> — контент не влияет на ширину</li>
-            <li><code>size</code> — контент не влияет на ширину и высоту</li>
-        </ul>
-    </section>
-    <section class="slide">
-        <h3><code>container-type</code></h3>
-        <ul>
-            <li><code>inline-size</code> — контент не влияет на ширину</li>
-            <li><code>size</code> — контент не влияет на ширину и высоту</li>
-        </ul>
-        <img src="./images/arrow-as-empty-at-all.svg" alt="" class="place t r" style="width: 32%; top: 13%; right: 12%;">
-    </section>
-
-    <section class="slide">
-        <img src="./images/scheme-container-size.svg" alt="" class="place" style="width: 70%;">
-    </section>
-
-    <section class="slide">
-        <pre class="place l t" style="top: 25px; left: 20px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .container {
-            display: inline-block;
-            border: 2px solid green;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                color: yellow;
-            }
-        }
-        
-        @container (height <= 150px) {
-            .element {
-                font-style: italic;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-type-1/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
-    </section>
-    <section class="slide">
-        <pre class="place l t" style="top: 25px; left: 20px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .container {
-            display: block;
-            border: 2px solid green;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                color: yellow;
-            }
-        }
-        
-        @container (height <= 150px) {
-            .element {
-                font-style: italic;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-type-1-1/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
-    </section>
-    <section class="slide">
-        <pre class="place l t" style="top: 25px; left: 20px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .container {
-            display: block;
-            height: 160px;
-            border: 2px solid green;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                color: yellow;
-            }
-        }
-        
-        @container (height <= 150px) {
-            .element {
-                font-style: italic;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-type-1-2/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
-    </section>
-
-    <section class="slide">
-        <pre class="place l t" style="top: 25px; left: 20px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        body {
-            display: grid;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                color: yellow;
-            }
-        }
-        
-        @container (height <= 150px) {
-            .element {
-                font-style: italic;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-type-2/index.html" frameborder="0" class="place r t iframe" style="width: 60%; top: 80px;"></iframe>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">📝 Ещё одна заметка про размер</h2>
-    </section>
-
-    <section class="slide">
-        <pre class="place l t" style="top: -10px;">
-        <code class="language-css">
-        .container {
-            container-type: inline-size;
-            border: 2px solid white;
-            padding: 20px;
-        }
-
-        .element {
-            background: green;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                background: yellow;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-width/index.html" frameborder="0" class="place r t iframe" style="width: 55%; top: 180px;"></iframe>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title">Почему так происходит?</h2>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title"><code>box-sizing</code></h2>
-    </section>
-
-    <section class="slide">
-        <iframe src="./demos/box-model/index.html" frameborder="0" class="place iframe"></iframe>
-    </section>
-
-    <section class="slide">
-        <pre class="place l t" style="top: -10px;">
-        <code class="language-css">
-        .container {
-            container-type: inline-size;
-            border: 2px solid white;
-            padding: 20px;
-        }
-
-        .element {
-            background: green;
-        }
-
-        @container (width <= 300px) {
-            .element {
-                background: yellow;
-            }
-        }
-        </code>
-        </pre>
-        <iframe src="./demos/container-width-1/index.html" frameborder="0" class="place r t iframe" style="width: 55%; top: 120px;"></iframe>
-    </section>
-
-    <section class="slide">
-        <h2 class="place centered-slide-title" style="line-height: 1.4;">Размеры контейнера <br> === <br> Размерам content-box</h2>
-    </section> -->
 
 
     <section class="slide">
@@ -1667,26 +1307,23 @@
         </script>
     </section>
 
-    <!-- <section class="slide">
-        <h3><code>container-type</code></h3>
-        <ul>
-            <li><code>inline-size</code> — контент не влияет на <span class="accented">inline</span> размер</li>
-            <li><code>size</code> — контент не влияет на <span class="accented">inline</span> и <span class="accented">block</span> размеры</li>
-        </ul>
-    </section>
-    <section class="slide">
-        <h3><code>container-type</code></h3>
-        <ul>
-            <li><code>inline-size</code> — контент не влияет на <span class="accented">inline</span> размер</li>
-            <li><code>size</code> — контент не влияет на <span class="accented">inline</span> и <span class="accented">block</span> размеры</li>
-        </ul>
-        <img src="./images/arrow-as-empty-at-all.svg" alt="" class="place t r" style="width: 32%; top: 13%; right: 12%;">
-    </section> -->
-
     <section class="slide">
         <h2 class="place centered-slide-title">
             <code>container-type</code> &nbsp;➡️&nbsp; <code>contain</code>
         </h2>
+    </section>
+
+    <section class="slide">
+        <img src="./images/scheme-infinite-resize-1.svg" alt="" class="place" style="height: 60%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-infinite-resize-2.svg" alt="" class="place" style="height: 60%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-infinite-resize-3.svg" alt="" class="place" style="height: 60%;">
+    </section>
+    <section class="slide">
+        <img src="./images/scheme-infinite-resize-4.svg" alt="" class="place" style="height: 60%;">
     </section>
 
     <section class="slide">
@@ -1813,7 +1450,7 @@
     </section>
 
     <section class="slide">
-        <iframe src="./demos/container-query-units/index.html" frameborder="0" class="place iframe" style="height: 80%; width: 80%;"></iframe>
+        <iframe src="./demos/container-query-units/index.html" frameborder="0" class="place iframe" style="height: 80%; width: 90%;"></iframe>
     </section>
 
     <section class="slide">
@@ -1856,10 +1493,6 @@
         </pre>
     </section>
 
-    <!-- <section class="slide">
-        <iframe src="./demos/card-typography-2/index.html" frameborder="0" class="place iframe"></iframe>
-    </section> -->
-
     <section class="slide">
         <iframe src="./demos/responsive-typo/index.html" frameborder="0" class="place iframe"></iframe>
     </section>
@@ -1880,56 +1513,6 @@
         <img src="./images/scheme-fluid-typography.svg" alt="" class="place" style="height: 75%;">
     </section> 
 
-    <!-- <section class="slide">
-        <pre class="place l" style="left: 25px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .text {
-            font-size: 30px;
-        }
-
-        @container card (width <= 600px) {
-            .text {
-                font-size: 20px;
-            }
-        }
-
-        @container card (width <= 400px) {
-            .text {
-                font-size: 18px;
-            }
-        }
-        </code>
-        </pre>
-    </section>
-    <section class="slide">
-        <pre class="place l" style="left: 25px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .text {
-            font-size: 30px;
-        }
-
-        @container card (width <= 600px) {
-            .text {
-                font-size: 20px;
-            }
-        }
-
-        @container card (width <= 400px) {
-            .text {
-                font-size: 18px;
-            }
-        }
-        </code>
-        </pre>
-        <pre class="place r" style="right: 25px;">
-        <code class="language-css" style="font-size: 0.8em;">
-        .text {
-            font-size: clamp(18px, 20px, 30px);
-        }
-        </code>
-        </pre>
-    </section> -->
-
     <section class="slide">
         <h2 class="place centered-slide-title">Как реализовать?</h2>
     </section>
@@ -1949,23 +1532,6 @@
         <a href="https://drafts.csswg.org/css-values/#funcdef-clamp" class="copyright">CSS-спецификация: clamp()</a>
     </section>
 
-    <!-- <section class="slide">
-        <div class="browser-support-row">
-            <div class="browser-support-row__item">
-                <div>Chrome</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Firefox</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Safari</div>
-                <div>✅</div>
-            </div>
-        </div>
-        <a href="https://caniuse.com/?search=clamp%28%29" class="copyright">Can I use: clamp()</a>
-    </section> -->
     <section class="slide">
         <baseline-status featureid="min-max-clamp" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/?search=clamp%28%29" class="copyright">Can I use: clamp()</a>
@@ -2006,10 +1572,6 @@
     <img src="./images/arrow-max-value.svg" alt="" class="place t l" style="width: 24%; top: 58%; left: 76%;">
     <img src="./images/arrow-prevered-value.svg" alt="" class="place t l" style="width: 25%; top: 17%; left: 61%;">
     </section>
-
-    <!-- <section class="slide">
-        <iframe src="./demos/card-typography-3/index.html" frameborder="0" class="place iframe"></iframe>
-    </section> -->
 
     <section class="slide">
     <pre class="place">
@@ -2102,23 +1664,6 @@
         <a href="https://drafts.csswg.org/css-conditional-5/#style-container" class="copyright">CSS-спецификация: Style Queries</a>
     </section>
 
-    <!-- <section class="slide">
-        <div class="browser-support-row">
-            <div class="browser-support-row__item">
-                <div>Chrome</div>
-                <div>⚠️</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Firefox</div>
-                <div>❌</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Safari</div>
-                <div>⚠️</div>
-            </div>
-        </div>
-        <a href="https://caniuse.com/css-container-queries-style" class="copyright">Can I use: Style Queries</a>
-    </section> -->
     <section class="slide">
         <baseline-status featureid="container-style-queries" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-container-queries-style" class="copyright">Can I use: Style Queries</a>
@@ -2362,6 +1907,8 @@
         </pre>
         <img src="./images/arrow-apply-styles.svg" alt="" class="place" style="width: 27%; top: 23%; left: 73%;">
         <img src="./images/arrow-can-combine-query.svg" alt="" class="place" style="width: 23%; top: 59%; left: 69%;">
+        <img src="./images/line-5.svg" alt="" class="place" style="width: 24%; top: 79%; left: 40%;">
+        <img src="./images/line-6.svg" alt="" class="place" style="width: 25%; top: 79%; left: 70%;">
     </section>
 
     <section class="slide">
@@ -2607,23 +2154,6 @@
         <a href="https://drafts.csswg.org/selectors/#relational" class="copyright">CSS-спецификация: :has()</a>
     </section>
 
-    <!-- <section class="slide">
-        <div class="browser-support-row">
-            <div class="browser-support-row__item">
-                <div>Chrome</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Firefox</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Safari</div>
-                <div>✅</div>
-            </div>
-        </div>
-        <a href="https://caniuse.com/css-has" class="copyright">Can I use: :has()</a>
-    </section> -->
     <section class="slide">
         <baseline-status featureid="has" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-has" class="copyright">Can I use: :has()</a>
@@ -3006,44 +2536,7 @@
         </code>
         </pre>
     </section>
-    <!-- <section class="slide">
-        <pre class="place l" style="left: 100px;">
-        <code class="language-css">
-        html[dir="ltr"] .card {
-            position: relative;
-            padding: 20px;
-            padding-right: 70px;
-        }
-
-        html[dir="ltr"] .icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-        }
-        </code>
-        </pre>
-        <pre class="place r" style="right: 140px;">
-        <code class="language-css">
-        html[dir="rtl"] .card {
-            position: relative;
-            padding: 20px;
-            padding-left: 70px;
-        }
-
-        html[dir="rtl"] .icon {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 40px;
-            height: 40px;
-        }
-        </code>
-        </pre>
-        <img src="./images/arrow-left-right.svg" alt="" class="place" style="width: 20%; top: 8%; left: 27%;">
-        <img src="./images/line-1.svg" alt="" class="place" style="width: 13%; top: 20%; left: 25%;">
-    </section> -->
+    
     <section class="slide">
         <pre class="place l" style="left: 100px;">
         <code class="language-css">
@@ -3169,23 +2662,6 @@
         <a href="https://www.w3.org/TR/css-logical-1/" class="copyright">CSS-спецификация: Логические свойства</a>
     </section>
 
-    <!-- <section class="slide">
-        <div class="browser-support-row">
-            <div class="browser-support-row__item">
-                <div>Chrome</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Firefox</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Safari</div>
-                <div>✅</div>
-            </div>
-        </div>
-        <a href="https://caniuse.com/css-logical-props" class="copyright">Can I use: Logical properties</a>
-    </section> -->
     <section class="slide">
         <baseline-status featureid="logical-properties" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-logical-props" class="copyright">Can I use: Logical properties</a>
@@ -3252,6 +2728,26 @@
         </ul>
     </section>
 
+
+    <section class="slide">
+        <pre class="place l" style="left: 70px;">
+        <code class="language-css">
+        .card {
+            position: relative;
+            padding: 20px;
+            padding-right: 70px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        </code>
+        </pre>
+    </section>
     <section class="slide">
         <pre class="place l" style="left: 70px;">
         <code class="language-css">
@@ -3290,6 +2786,11 @@
         <img src="./images/arrow-physical-properties.svg" alt="" class="place" style="width: 26%; top: 8%; left: 24%;">
         <img src="./images/arrow-logical-propeties.svg" alt="" class="place" style="width: 26%; top: 8%; left: 70%;">
         <img src="./images/arrow-3.svg" alt="" class="place" style="width: 8%; top: 8.5%; left: 48%;">
+
+        <img src="./images/line-7.svg" alt="" class="place" style="width: 19%; top: 38%; left: 24%;">
+        <img src="./images/line-8.svg" alt="" class="place" style="width: 25%; top: 38%; left: 70%;">
+        <img src="./images/line-9.svg" alt="" class="place" style="height: 25%; top: 70%; left: 12%;">
+        <img src="./images/line-10.svg" alt="" class="place" style="height: 25%; top: 70%; left: 55%;">
     </section>
 
     <section class="slide">
@@ -3312,9 +2813,6 @@
         </pre>
     </section>
 
-    <!-- <section class="slide">
-        <img src="./images/scheme-logical-to-physical.svg" alt="" class="place" style="width: 80%;">
-    </section> -->
     <section class="slide">
         <img src="./images/scheme-logical-to-physical-2.svg" alt="" class="place" style="width: 80%;">
     </section>
@@ -3356,23 +2854,6 @@
         <a href="https://www.w3.org/TR/css-anchor-position-1/" class="copyright">CSS-спецификация: anchor positioning</a>
     </section>
 
-    <!-- <section class="slide">
-        <div class="browser-support-row">
-            <div class="browser-support-row__item">
-                <div>Chrome</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Firefox</div>
-                <div>✅</div>
-            </div>
-            <div class="browser-support-row__item">
-                <div>Safari</div>
-                <div>✅</div>
-            </div>
-        </div>
-        <a href="https://caniuse.com/css-anchor-positioning" class="copyright">Can I use: Anchor Positioning</a>
-    </section> -->
     <section class="slide">
         <baseline-status featureid="anchor-positioning" class="place baseline"></baseline-status>
         <a href="https://caniuse.com/css-anchor-positioning" class="copyright">Can I use: Anchor Positioning</a>
@@ -3473,17 +2954,6 @@
         <iframe src="./demos/tooltip-0-0/index.html" frameborder="0" class="place iframe"></iframe>
     </section>
 
-    <!-- <section class="slide">
-        <pre class="place">
-        <code class="language-css">
-        .tooltip::before {
-            content: '▼';
-            position: absolute;
-            top: 100%;
-        }
-        </code>
-        </pre>
-    </section> -->
     <section class="slide">
         <pre class="place">
         <code class="language-css">
@@ -3615,10 +3085,6 @@
     <section class="slide">
         <img src="./images/mem-patrick.jpg" alt="" class="place rounded" style="height: 70%;">
     </section>
-
-    <!-- <section class="slide">
-        <iframe src="./demos/menu/index.html" frameborder="0" class="place iframe"></iframe>
-    </section> -->
 
     <section class="slide">
         <img src="./images/fc-2025-roma-akhmadullin.jpg" alt="" class="place rounded" style="width: 70%;">
@@ -3774,17 +3240,6 @@
         <img src="./images/scheme-adaptive-ui-includes.svg" alt="" class="place" style="height: 70%;">
     </section>
 
-    <!-- <section class="slide">
-        <h3 class="without-margins">Адаптивный интерфейс должен учитывать</h2>
-        <ul>
-            <li>вьюпорт</li>
-            <li>контент</li>
-            <li>размеры контейнера</li>
-            <li>окружающую среду</li>
-            <li>предпочтения пользователя</li>
-        </ul>
-    </section> -->
-
     <section class="slide slide-with-table">
         <table>
             <thead>
@@ -3856,165 +3311,38 @@
         <h2 class="place centered-slide-title" style="line-height: 1.4;">Давайте делать по-настоящему адаптивные интерфейсы!</h2>
     </section>
 
-    <section class="the-end slide without-progress" style="padding: 60px;">
-        <div><h2 style="text-transform: uppercase; font-size: 45px;">Всем любви!</h2></div>
-        <div style="display: flex; align-items: center; gap: 20px; margin-top: 65px;">
-            <img src="./images/roma-akmadullin.jpg" alt="" style="border-radius: 35%; width: 100px;">
+    <section id="the-end" class="the-end the-end-2 slide without-progress">
+        <div class="the-end-2-bio-block">
             <div>
-                <h3 style="margin: 0; line-height: 1; margin-bottom: 5px;">Рома Ахмадуллин</h3>
-                <p style="margin: 0; line-height: 1;">Дром</p>
+                <h2>Всем любви!</h2>
+                <div class="the-end-2-bio-block__secondary-text">И адаптивных интефейсов :)</div>
             </div>
-        </div>
-        <div class="end-bio__links place l b" style="left: 6%; bottom: 6%;">
-            <div>
-                <h4 class="end__subheading">Слайды</h4>
-                <div class="end-bio__link-block">
-                    <img src="./images/logo-github-2.svg" alt="" class="end-bio__link-logo" />
-                    <a href="https://github.com/akhmadullin/yalf-2026" class="end-bio__link">akhmadullin/yalf-2026</a>
-                </div>
-            </div>
-            <div>
-                <h4 class="end__subheading">Связаться</h4>
-                <div class="end-bio__link-block">
-                    <img src="./images/logo-telegram.svg" alt="" class="end-bio__link-logo">
-                    <a href="https://t.me/akhmadullin_roman" class="end-bio__link">akhmadullin_roman</a>
+            <div class="the-end-2__bio">
+                <img src="./images/roma-akmadullin.jpg" alt="">
+                <div>
+                    <h3>Рома Ахмадуллин</h3>
+                    <div>Лид фронтенда, Дром</div>
                 </div>
             </div>
         </div>
-        <div class="place r t" style="width: 22%; top: -1%; right: 5%;">
-            <h4 class="end__subheading centered-text">Оценить доклад</h4>
-            <img src="./images/qr-code-placeholder.svg" class="rounded qr-code" alt="" style="width: 100%; padding:0; background: none;">
+        <div class="the-end-2-tg-block">
+            <img src="./images/qr-code-to-tg-channel-with-tg-logo.svg" alt="">
+            <a href="https://t.me/roma_akhmadullin">@roma_akhmadullin</a>
+            <div style="font-size: 18px; color: #7e7e7e;">Про фронтенд и не только</div>
         </div>
-        <div class="place r t" style="width: 22%; top: 45%; right: 5%;">
-            <h4 class="end__subheading centered-text">Подписаться</h4>
-            <img src="./images/qr-code-to-tg-channel.svg" class="rounded qr-code" alt="" style="width: 100%;">
+        <div class="the-end-2-conf-colonctitum">
+            <img src="./images/ya-logo.png" alt="">
+            <div class="the-end-2__conf-name">
+                / Я <span style="opacity: 0.8;">💛</span> Фронтенд 2026
+            </div>
         </div>
-        <img src="./images/arrow-tg-chanel.svg" alt="" class="place b r" style="width: 24%; bottom: 17%; right: 30%;">
     </section>
 
-    <!-- <section class="slide">
-        // todo в конце было бы прикольно сделать демку, которы бы по максимуму бы использовала в себе все ранее описанные фичи
-    </section> -->
-
-    <!-- <section class="slide">
-        <h2 class="place centered-slide-title">Время шарить ссылочки <span>🤳🏼</span></h2>
-    </section>
-
-    <section class="slide">
-        <img src="./images/tg-channel-ava-3.jpg" class="place l rounded dark-image" alt="" style="width: 35%; left: 10%;">
-        <div class="place r" style="width: 22%; right: 14%; top:49%">
-            <h4 class="end__subheading" style="text-align: center; margin-top: 0;">Подписаться</h4>
-            <img src="./images/qr-code-to-tg-channel.svg" class="rounded qr-code" alt="" style="width: 100%;">
-        </div>
-        <a href="https://t.me/roma_akhmadullin" class="copyright">Рома вещает</a>
-    </section>
-
-    <section id="the-end" class="the-end slide without-progress" style="padding: 60px;">
-        <div><h2 style="text-transform: uppercase; font-size: 45px;">Всем добра!</h2></div>
-        <div style="display: flex; align-items: center; gap: 20px; margin-top: 65px;">
-            <img src="./images/roma-akmadullin.jpg" alt="" style="border-radius: 50%; width: 100px;">
-            <div>
-                <h3 style="margin: 0; line-height: 1; margin-bottom: 5px;">Рома Ахмадуллин</h3>
-                <p style="margin: 0; line-height: 1;">Дром</p>
-            </div>
-        </div>
-        <div class="end-bio__links place l b" style="left: 6%; bottom: 6%;">
-            <div>
-                <h4 class="end__subheading">Слайды</h4>
-                <div class="end-bio__link-block">
-                    <img src="./images/logo-github-2.svg" alt="" class="end-bio__link-logo" />
-                    <a href="https://github.com/akhmadullin/yalf-2026" class="end-bio__link">akhmadullin/yalf-2026</a>
-                </div>
-            </div>
-            <div>
-                <h4 class="end__subheading">Подписаться</h4>
-                <div class="end-bio__link-block">
-                    <img src="./images/logo-telegram.svg" alt="" class="end-bio__link-logo">
-                    <a href="https://t.me/roma_akhmadullin" class="end-bio__link">roma_akhmadullin</a>
-                </div>
-            </div>
-        </div>
-        <div class="place r t" style="width: 22%; top: 6%; right: 5%;">
-            <h4 class="end__subheading centered-text">Оценить доклад</h4>
-            <img src="./images/qr-code-placeholder.svg" class="rounded qr-code" alt="" style="width: 100%; padding:0; background: none;">
-        </div> 
-    </section> -->
-
-    <!-- <section class="slide the-end without-progress">
-        <div class="place t r" style="display: flex; align-items: center; gap: 20px; top: 5%; right: 5%;">
-            <img src="./images/roma-akmadullin.jpg" alt="" style="border-radius: 50%; width: 100px;">
-            <div>
-                <h3 style="margin: 0; line-height: 1; margin-bottom: 5px;">Рома Ахмадуллин</h3>
-                <p style="margin: 0; line-height: 1;">Дром</p>
-            </div>
-        </div>
-
-        <div class="place t l" style="top: 11%; left: 5%;">
-            <h2 style="text-transform: uppercase; font-size: 45px;">Всем любви!</h2>
-        </div>
-
-        <div class="place l t" style="width: 22%; left: 14%; top: 30%; display: flex; flex-direction: column; align-items: center; gap: 5px;">
-            <h4 class="end__subheading" style="text-align: center; margin-top: 0;">Подписаться</h4>
-            <img src="./images/qr-code-to-tg-channel.svg" class="rounded qr-code" alt="" style="width: 100%;">
-            <div style="font-weight: bold; font-size: 22px;">@roma_akhmadullin</div>
-            <div style="font-weight: bold; white-space: nowrap; font-size: 18px;">Про фронтенд и не только</div>
-        </div>
-        <div class="place r t" style="width: 22%; right: 14%; top: 30%;">
-            <h4 class="end__subheading" style="text-align: center; margin-top: 0;">Оценить доклад</h4>
-            <img src="./images/qr-code-placeholder.svg" class="rounded qr-code" alt="" style="width: 100%; padding:0; background: none;">
-        </div>
-    </section> -->
-
-    <!-- <section class="slide the-end without-progress active">
-        <div class="place t r" style="display: flex;align-items: center;gap: 20px;top: 21%;right: 55%;">
-            <img src="./images/roma-akmadullin.jpg" alt="" style="border-radius: 50%; width: 100px;">
-            <div>
-                <h3 style="margin: 0; line-height: 1; margin-bottom: 5px;">Рома Ахмадуллин</h3>
-                <p style="margin: 0; line-height: 1;">Дром</p>
-            </div>
-        </div>
-
-        <div class="place t l" style="top: 6%;left: 5%;">
-            <h2 style="text-transform: uppercase; font-size: 45px;">Всем любви!</h2>
-        </div>
-
-        <div class="place l t" style="left: 4%;top: 43%;display: flex; align-items: center; gap: 20px;">
-            <div style="display: flex; flex-direction: column; gap: 5px; flex-shrink: none; align-items: center;">
-                <h4 class="end__subheading" style="text-align: center; margin-top: 0;">Подписаться</h4>
-                <img src="./images/qr-code-to-tg-channel.svg" class="rounded qr-code" alt="" style="width: 200px;">
-                <div style="font-weight: bold; font-size: 22px;">@roma_akhmadullin</div>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 5px; padding-top: 42px;">
-                <div style="font-weight: bold; font-size: 20px;">Телеграм-канал</div>
-                <div style="font-weight: bold; white-space: nowrap; font-size: 18px;">Про фронтенд и не только</div>
-            </div>
-        </div>
-        <div class="place r t" style="width: 22%;right: 5%;top: 7%;">
-            <h4 class="end__subheading" style="text-align: center; margin-top: 0;">Оценить доклад</h4>
-            <img src="./images/qr-code-placeholder.svg" class="rounded qr-code" alt="" style="width: 100%; padding:0; background: none;">
-        </div>
-    </section> -->
-
-    <!-- <section id="the-end" class="the-end slide without-progress" style="padding: 60px;">
-        <div><h2 style="text-transform: uppercase; font-size: 45px;">Всем любви!</h2></div>
-        <div class="place r t" style="display: flex; align-items: center; gap: 20px;">
-            <img src="./images/roma-akmadullin.jpg" alt="" style="border-radius: 50%; width: 100px;">
-            <div>
-                <h3 style="margin: 0; line-height: 1; margin-bottom: 5px;">Рома Ахмадуллин</h3>
-                <p style="margin: 0; line-height: 1;">Дром</p>
-            </div>
-        </div>
-        <div class="place r t" style="width: 22%; top: 6%; right: 5%;">
-            <h4 class="end__subheading centered-text">Оценить доклад</h4>
-            <img src="./images/qr-code-placeholder.svg" class="rounded qr-code" alt="" style="width: 100%; padding:0; background: none;">
-        </div> 
-    </section> -->
-   
     <!-- <div class="progress"></div> -->
 
     <script src="shower/shower.js"></script>
     <script src="./lib/highlight/highlight.js"></script>
     <script>hljs.highlightAll();</script>
-    <!-- Copyright © 2025 Roma Akhmadullin -->
+    <!-- Copyright © 2026 Roma Akhmadullin -->
 </body>
 </html>

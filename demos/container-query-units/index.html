@@ -86,6 +86,82 @@
             gap: 10px;
             align-items: center;
         }
+
+        #element {
+            anchor-name: --element;
+        }
+
+        #element-content {
+            anchor-name: --element-content;
+        }
+
+        .horizontal-connector {
+            position: absolute;
+            left: calc(anchor(--element left) + 5px);
+            right: calc(anchor(--element-content left) + 5px);
+            top: 57%;
+            height: 3px;
+            background-color: black;
+            anchor-name: --horizontal-connector;
+        }
+
+        .horizontal-connector::after {
+            content: '▶';
+            position: absolute;
+            right: -4px;
+            transform: translateY(-45%);
+            color: black;
+        }
+
+        .horizontal-connector::before {
+            content: '◀';
+            position: absolute;
+            left: -4px;
+            transform: translateY(-45%);
+            color: black;
+        }
+
+        .horizontal-connector-caption {
+            position: absolute;
+            position-anchor: --horizontal-connector;
+            position-area: top;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .vertical-connector {
+            position: absolute;
+            top: calc(anchor(--element top) + 5px);
+            bottom: calc(anchor(--element-content top) + 5px);
+            left: 29%;
+            width: 3px;
+            background-color: black;
+            anchor-name: --vertical-connector;
+        }
+
+        .vertical-connector-caption {
+            position: absolute;
+            position-anchor: --vertical-connector;
+            position-area: right;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .vertical-connector::after {
+            content: '▲';
+            position: absolute;
+            top: -9px;
+            transform: translateX(-45%);
+            color: black;
+        }
+
+        .vertical-connector::before {
+            content: '▼';
+            position: absolute;
+            bottom: -9px;
+            transform: translateX(-45%);
+            color: black;
+        }
     </style>
     <div class="layout">
         <div class="controls">
@@ -93,26 +169,31 @@
                 <div class="input-row">
                     <label for="width-input">width</label>
                     <div class="input-range-wrapper">
-                        <span>300px</span>
-                        <input type="range" id="width-input" min="300" max="750" step="5" value="400">
-                        <span>800px</span>
+                        <span>500px</span>
+                        <input type="range" id="width-input" min="500" max="750" step="5" value="550">
+                        <span>750px</span>
                     </div>
                  </div>
                  <div class="input-row">
                     <label for="padding-input">padding</label>
                     <div class="input-range-wrapper">
-                        <span>5cqw</span>
-                        <input type="range" id="padding-input" min="5" max="25" step="1" value="7">
-                        <span>25cqw</span>
+                        <span>8cqw</span>
+                        <input type="range" id="padding-input" min="8" max="16" step="1" value="10">
+                        <span>16cqw</span>
                     </div>
                  </div>
             </div>
         </div>
         <div id="container" class="container">
             <div id="element" class="element">
-                <div class="element-content">
+                <div id="element-content" class="element-content">
                     Элемент внутри контейнера
                 </div>
+                <div class="horizontal-connector"></div>
+                <div class="vertical-connector"></div>
+
+                <div class="horizontal-connector-caption"></div>
+                <div class="vertical-connector-caption"></div>
             </div>
         </div>
     </div>
@@ -123,12 +204,18 @@
         const widthInput = document.getElementById('width-input');
         const paddingInput = document.getElementById('padding-input');
 
+        const horizontalConnectorCaption = document.getElementsByClassName('horizontal-connector-caption')[0]
+        const verticalConnectorCaption = document.getElementsByClassName('vertical-connector-caption')[0]
+
         const updateContainerWidth = () => {
             container.style.setProperty('width', `${widthInput.value}px`);
         }
 
         const updateElementPadding = () => {
-            element.style.setProperty('padding', `${paddingInput.value}cqw`);
+            const value = `${paddingInput.value}cqw`;
+            element.style.setProperty('padding', value);
+            horizontalConnectorCaption.textContent = value;
+            verticalConnectorCaption.textContent = value;
         }
 
         widthInput.addEventListener('input', updateContainerWidth)
