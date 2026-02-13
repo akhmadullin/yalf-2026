@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            /* color-scheme: dark; */
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
+            gap: 40px;
+            padding: 40px 60px;
+            color: #ffffff;
+        }
+
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            container-type: inline-size;
+            container-name: card;
+            width: 580px;
+            overflow-x: auto;
+            resize: horizontal;
+            will-change: width;
+        }
+
+        .card-content {
+            display: flex;
+            gap: 20px;
+            background-color: #ecf6ff;
+            color: black;
+            border-radius: 6px;
+            min-height: 100px;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .image {
+            display: block;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        @container card (width <= 414px) {
+            .card-content {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                font-size: 18px;
+            }
+
+            .image {
+                width: 100%;
+                height: unset;
+                aspect-ratio: 3 / 2;
+            }
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .text {
+                text-wrap: balance;
+            }
+        }
+
+        /* input[type="range"] {
+            accent-color: hsla(203, 97%, 65%, 1);
+        }
+
+        .input-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        } */
+    </style>
+    <!-- <div class="input-row">
+        <label for="width">width</label>
+        <input type="range" id="width" min="320" max="580" step="1" value="580">
+    </div> -->
+    <div id="card" class="card">
+        <div class="card-content">
+            <img src="./assets/cat-1-1.jpg" alt="" class="image">
+            <div class="text-container">
+                <h3 class="title">Заголовок</h3>
+                <div class="text">
+                    Текст карточки, очень интересный, не сильно длинный.
+                </div>
+                <a href="#">Читать -></a>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        const input = document.getElementById('width');
+        const card = document.getElementById('card');
+
+        const updateWidth = () => {
+            card.style.setProperty('width', `${input.value}px`);
+        };
+
+        updateWidth();
+
+        input.addEventListener('input', updateWidth)
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'YS Text';
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../fonts/YS/YandexSansText-Regular.woff2)
+        format("woff2");
+}
+
+@font-face {
+    font-family: 'YS Text';
+    font-weight: 700;
+    font-display: swap;
+    src: url(../../fonts/YS/YandexSansText-Bold.woff2)
+        format("woff2");
+}
+
+body {
+    font-size: 18px;
+}
+
+* {
+    font-family: 'YS Text', system-ui, sans-serif;
+}
+
+code {
+    background-color: rgba(88, 90, 94, 0.1);
+    border-radius: 10px;
+    font-family: monospace;
+    padding: 5px 10px
+}

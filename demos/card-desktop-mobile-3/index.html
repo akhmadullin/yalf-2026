@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            color-scheme: dark;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 60px;
+            padding-bottom: 0px;
+            color: #ffffff;
+        }
+
+        .desktop,
+        .mobile {
+            height: 80%;
+            border: 4px solid white;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow: auto;
+        }
+
+        .desktop {
+            width: 70%;
+        }
+
+        .mobile {
+            width: 25%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background-color: #30a197;
+        }
+
+        .nav {
+           width: 100%;
+           height: 30px;
+           border-radius: 6px; 
+           background-color: #557391; 
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card-desktop {
+            display: flex;
+            gap: 20px;
+            background: #557391;
+            border: 4px solid #557391;
+            border-radius: 6px;
+            min-height: 100px;
+            padding: 10px;
+            font-size: 16px;
+
+            .image {
+                width: 159px;
+                height: 100%;
+            }
+
+            h3 {
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+        }
+
+        .image {
+            background-color: #a9d3da;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .card-mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: #557391;
+            border: 4px solid #557391;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 14px;
+
+            .image {
+                width: 100%;
+                height: 100px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .text {
+                text-wrap: balance;
+            }
+        }
+
+        .accented {
+            border-color: #fcd03c;
+        }
+    </style>
+    <div class="desktop">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="nav"></div>
+        </div>
+        <div class="card-desktop accented">
+            <div class="image"></div>
+            <div class="text-container">
+                <h3 class="title">Заголовок</h3>
+                <div class="text">
+                    Текст карточки, очень интересный, не сильно длинный.
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card-mobile">
+                <div class="image"></div>
+                <div class="text-container">
+                    <h3 class="title">Заголовок</h3>
+                    <div class="text">
+                        Текст карточки, очень интересный, не сильно длинный.
+                    </div>
+                </div>
+            </div>
+            <div class="card-mobile">
+                <div class="image"></div>
+                <div class="text-container">
+                    <h3 class="title">Заголовок</h3>
+                    <div class="text">
+                        Текст карточки, очень интересный, не сильно длинный.
+                    </div>
+                </div>
+            </div>
+            <div class="card-mobile accented">
+                <div class="image"></div>
+                <div class="text-container">
+                    <h3 class="title">Заголовок</h3>
+                    <div class="text">
+                        Текст карточки, очень интересный, не сильно длинный.
+                    </div>
+                </div>
+            </div>
+            <div class="card-mobile">
+                <div class="image"></div>
+                <div class="text-container">
+                    <h3 class="title">Заголовок</h3>
+                    <div class="text">
+                        Текст карточки, очень интересный, не сильно длинный.
+                    </div>
+                </div>
+            </div>
+            <div class="card-mobile">
+                <div class="image"></div>
+                <div class="text-container">
+                    <h3 class="title">Заголовок</h3>
+                    <div class="text">
+                        Текст карточки, очень интересный, не сильно длинный.
+                    </div>
+                </div>
+            </div>
+            <div class="card-mobile">
+                <div class="image"></div>
+                <div class="text-container">
+                    <h3 class="title">Заголовок</h3>
+                    <div class="text">
+                        Текст карточки, очень интересный, не сильно длинный.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="nav"></div>
+        </div>
+        <div class="card-mobile accented">
+            <div class="image"></div>
+            <div class="text-container">
+                <h3 class="title">Заголовок</h3>
+                <div class="text">
+                    Текст карточки, очень интересный, не сильно длинный.
+                </div>
+            </div>
+        </div>
+        <div class="card-mobile">
+            <div class="image"></div>
+            <div class="text-container">
+                <h3 class="title">Заголовок</h3>
+                <div class="text">
+                    Текст карточки, очень интересный, не сильно длинный.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

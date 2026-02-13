@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Container-type</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            color: #ffffff;
+            font-size: 18px;
+            padding: 40px;
+            color-scheme: dark;
+        }
+
+        .layout {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .window {
+            padding: 30px;
+            border: 2px solid #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            height: 300px;
+            resize: both;
+            overflow: auto;
+            position: relative;
+        }
+
+        .radios {
+            display: flex;
+            gap: 20px;
+        }
+
+        input[type="radio"] {
+            accent-color: hsla(203, 97%, 65%, 1);
+        }
+
+        .container {
+            display: inline-block;
+            border: 2px solid hsla(102, 63%, 66%, 1);
+            border-radius: 6px;
+            color: #ffffff;
+            anchor-name: --container;
+        }
+
+        .container-content {
+            display: inline-block;
+            padding: 20px 30px;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                color: hsla(48, 99%, 72%, 1);
+            }
+        }
+
+        @container (height <= 150px) {
+            .element {
+                font-style: italic;
+            }
+        }
+
+        .container-width-caption {
+            position: absolute;
+            position-anchor: --container;
+            position-area: top center;
+            transform: translateY(50%);
+            background-color: #ffffff;
+            padding: 5px 8px;
+            color: #000000;
+            border-radius: 6px;
+        }
+
+        .container-height-caption {
+            position: absolute;
+            position-anchor: --container;
+            position-area: left center;
+            transform: translateX(50%) rotate(-90deg);
+            background-color: #ffffff;
+            padding: 5px 8px;
+            color: #000000;
+            border-radius: 6px;
+        }
+    </style>
+    <div class="layout">
+        <div class="controls">
+            <div>container-type</div>
+            <div class="radios">
+                <label>
+                    <input type="radio" name="container-type" value="normal" checked> <span>normal</span>
+                </label>
+                <label>
+                    <input type="radio" name="container-type" value="inline-size"> <span>inline-size</span>
+                </label>
+                <label>
+                    <input type="radio" name="container-type" value="size"> <span>size</span>
+                </label>
+            </div>
+        </div>
+        <div class="window">
+            <div id="container" class="container">
+                <div class="container-content">
+                    <div id="element" class="element">Рубрика «Занимательные, но бесполезные факты». Когда европейцы впервые увидели жирафа, они назвали его верблюдопардом, решив, что это гибрид верблюда и леопарда.</div>
+                </div>
+            </div>
+            <div id="container-width-caption" class="container-width-caption"></div>
+            <div id="container-height-caption" class="container-height-caption"></div>
+        </div>
+    </div>
+    <script>
+        const container = document.getElementById('container');
+
+        const containerTypeRadios = document.getElementsByName('container-type');
+
+        containerTypeRadios.forEach((radio) => {
+            if (radio.checked) {
+                container.style.setProperty('container-type', radio.value);
+            }
+            radio.addEventListener('change', (event) => {
+                container.style.setProperty('container-type', event.target.value);
+            })
+        });
+
+        const containerWidthCaption = document.getElementById('container-width-caption');
+        const containerHeightCaption = document.getElementById('container-height-caption');
+
+        const valueToPx = (value) => `${Math.ceil(value)}px`;
+
+        containerWidthCaption.textContent = valueToPx(container.clientWidth);
+        containerHeightCaption.textContent = valueToPx(container.clientHeight);
+
+        const observer = new ResizeObserver(entries => {
+            const entry = entries[0];
+            const { width, height } = entry.contentRect;
+            containerWidthCaption.textContent = valueToPx(width);
+            containerHeightCaption.textContent = valueToPx(height);
+        });
+        observer.observe(container);
+    </script>
+</body>
+</html>

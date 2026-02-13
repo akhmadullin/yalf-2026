@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Container width</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            color: #ffffff;
+            font-size: 18px;
+            padding: 40px;
+            color-scheme: dark;
+        }
+
+        .layout {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .radios {
+            display: flex;
+            gap: 20px;
+        }
+
+        input[type="radio"] {
+            accent-color: hsla(203, 97%, 65%, 1);
+        }
+
+        .container {
+            container-type: inline-size;
+            border: 2px solid white;
+            border-radius: 6px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-x: auto;
+            resize: horizontal;
+        }
+
+        .element {
+            background-color: hsla(102, 63%, 66%, 1);
+            border-radius: 6px;
+            padding: 8px 12px;
+            color: #000000;
+        }
+
+        @container (width <= 300px) {
+            .element {
+                background-color: hsla(48, 99%, 72%, 1);
+            }
+        }
+    </style>
+    <div class="layout">
+        <div class="controls">
+            <div>box-sizing</div>
+            <div class="radios">
+                <label>
+                    <input type="radio" name="box-sizing" value="content-box" checked> <span>content-box</span>
+                </label>
+                <label>
+                    <input type="radio" name="box-sizing" value="border-box"> <span>border-box</span>
+                </label>
+            </div>
+        </div>
+        <div id="container" class="container">
+            <div>Значение width: <span id="container-width-caption"></span></div>
+            <div>Ширина content-box: <span id="container-content-box-caption"></span></div>
+            <div>Ширина фактическая: <span id="container-width-real-caption"></span></div>
+            <div id="element" class="element">Элемент внутри контейнера</div>
+        </div>
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        const element = document.getElementById('element');
+
+        const containerWidthCaption = document.getElementById('container-width-caption');
+        const containerContentBoxCaption = document.getElementById('container-content-box-caption');
+        const containerWidthRealCaption = document.getElementById('container-width-real-caption');
+
+        const valueToPx = (value) => `${Math.round(value)}px`;
+
+        const updateCaptions = () => {
+            containerWidthCaption.textContent = valueToPx(parseFloat(window.getComputedStyle(container).getPropertyValue('width')));
+            containerContentBoxCaption.textContent = valueToPx(element.offsetWidth);
+            containerWidthRealCaption.textContent = valueToPx(container.offsetWidth);
+        };
+
+        const boxSizingRadios = document.getElementsByName('box-sizing');
+
+        boxSizingRadios.forEach((radio) => {
+            if (radio.checked) {
+                container.style.setProperty('box-sizing', radio.value);
+                updateCaptions();
+            }
+            radio.addEventListener('change', (event) => {
+                container.style.setProperty('box-sizing', event.target.value);
+
+                if (event.target.value === 'border-box') {
+                    container.style.setProperty('width', `${parseFloat(container.style.getPropertyValue('width')) + 44}px`);
+                } else {
+                    container.style.setProperty('width', `${parseFloat(container.style.getPropertyValue('width')) - 44}px`);
+                }
+
+                updateCaptions();
+            })
+        });
+
+        const observer = new ResizeObserver(updateCaptions);
+        observer.observe(container);
+    </script>
+</body>
+</html>

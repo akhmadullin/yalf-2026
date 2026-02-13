@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Container query units</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../fonts/PT_Sans/pt-sans_caption-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../lib/styles/fonts-for-demos.css">
+</head>
+<body>
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+            color: #ffffff;
+            font-size: 18px;
+            padding: 40px;
+            color-scheme: dark;
+            overflow: hidden;
+        }
+
+        .layout {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .inputs {
+            display: flex;
+            gap: 60px;
+        }
+
+        input[type="range"] {
+            accent-color: hsla(203, 97%, 65%, 1);
+        }
+
+        .container {
+            container-type: inline-size;
+            /* background-color: white; */
+            height: 300px;
+            /* border: 2px solid white; */
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .element {
+            background-color: hsla(102, 63%, 66%, 1);
+            border-radius: 6px;
+            padding: 8px 12px;
+            color: #000000;
+            width: 100%;
+            height: 100%;
+        }
+
+        .element-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .input-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-range-wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #element {
+            anchor-name: --element;
+        }
+
+        #element-content {
+            anchor-name: --element-content;
+        }
+
+        .horizontal-connector {
+            position: absolute;
+            left: calc(anchor(--element left) + 5px);
+            right: calc(anchor(--element-content left) + 5px);
+            top: 57%;
+            height: 3px;
+            background-color: black;
+            anchor-name: --horizontal-connector;
+        }
+
+        .horizontal-connector::after {
+            content: '▶';
+            position: absolute;
+            right: -4px;
+            transform: translateY(-45%);
+            color: black;
+        }
+
+        .horizontal-connector::before {
+            content: '◀';
+            position: absolute;
+            left: -4px;
+            transform: translateY(-45%);
+            color: black;
+        }
+
+        .horizontal-connector-caption {
+            position: absolute;
+            position-anchor: --horizontal-connector;
+            position-area: top;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .vertical-connector {
+            position: absolute;
+            top: calc(anchor(--element top) + 5px);
+            bottom: calc(anchor(--element-content top) + 5px);
+            left: 29%;
+            width: 3px;
+            background-color: black;
+            anchor-name: --vertical-connector;
+        }
+
+        .vertical-connector-caption {
+            position: absolute;
+            position-anchor: --vertical-connector;
+            position-area: right;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .vertical-connector::after {
+            content: '▲';
+            position: absolute;
+            top: -9px;
+            transform: translateX(-45%);
+            color: black;
+        }
+
+        .vertical-connector::before {
+            content: '▼';
+            position: absolute;
+            bottom: -9px;
+            transform: translateX(-45%);
+            color: black;
+        }
+    </style>
+    <div class="layout">
+        <div class="controls">
+            <div class="inputs">
+                <div class="input-row">
+                    <label for="width-input">width</label>
+                    <div class="input-range-wrapper">
+                        <span>500px</span>
+                        <input type="range" id="width-input" min="500" max="750" step="5" value="550">
+                        <span>750px</span>
+                    </div>
+                 </div>
+                 <div class="input-row">
+                    <label for="padding-input">padding</label>
+                    <div class="input-range-wrapper">
+                        <span>8cqw</span>
+                        <input type="range" id="padding-input" min="8" max="16" step="1" value="10">
+                        <span>16cqw</span>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div id="container" class="container">
+            <div id="element" class="element">
+                <div id="element-content" class="element-content">
+                    Элемент внутри контейнера
+                </div>
+                <div class="horizontal-connector"></div>
+                <div class="vertical-connector"></div>
+
+                <div class="horizontal-connector-caption"></div>
+                <div class="vertical-connector-caption"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        const element = document.getElementById('element');
+
+        const widthInput = document.getElementById('width-input');
+        const paddingInput = document.getElementById('padding-input');
+
+        const horizontalConnectorCaption = document.getElementsByClassName('horizontal-connector-caption')[0]
+        const verticalConnectorCaption = document.getElementsByClassName('vertical-connector-caption')[0]
+
+        const updateContainerWidth = () => {
+            container.style.setProperty('width', `${widthInput.value}px`);
+        }
+
+        const updateElementPadding = () => {
+            const value = `${paddingInput.value}cqw`;
+            element.style.setProperty('padding', value);
+            horizontalConnectorCaption.textContent = value;
+            verticalConnectorCaption.textContent = value;
+        }
+
+        widthInput.addEventListener('input', updateContainerWidth)
+        paddingInput.addEventListener('input', updateElementPadding)
+
+        updateContainerWidth();
+        updateElementPadding();
+    </script>
+</body>
+</html>
