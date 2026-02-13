@@ -26,20 +26,25 @@
         body {
             background-color: rgb(22, 22, 22);
             /* color-scheme: dark; */
-            display: flex;
+            /* display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 40px; */
             padding: 40px 60px;
             color: #ffffff;
         }
 
         .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             container-type: inline-size;
             container-name: card;
             width: 834px;
             overflow-x: auto;
             resize: horizontal;
+            will-change: width;
         }
 
         .card-content {

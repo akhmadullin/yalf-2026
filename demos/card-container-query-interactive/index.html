@@ -26,20 +26,26 @@
         body {
             background-color: rgb(22, 22, 22);
             /* color-scheme: dark; */
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
             gap: 40px;
             padding: 40px 60px;
             color: #ffffff;
         }
 
         .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             container-type: inline-size;
             container-name: card;
             width: 580px;
             overflow-x: auto;
             resize: horizontal;
+            will-change: width;
         }
 
         .card-content {
@@ -95,8 +101,23 @@
                 text-wrap: balance;
             }
         }
+
+        /* input[type="range"] {
+            accent-color: hsla(203, 97%, 65%, 1);
+        }
+
+        .input-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        } */
     </style>
-    <div class="card">
+    <!-- <div class="input-row">
+        <label for="width">width</label>
+        <input type="range" id="width" min="320" max="580" step="1" value="580">
+    </div> -->
+    <div id="card" class="card">
         <div class="card-content">
             <img src="./assets/cat-1-1.jpg" alt="" class="image">
             <div class="text-container">
@@ -108,5 +129,17 @@
             </div>
         </div>
     </div>
+    <!-- <script>
+        const input = document.getElementById('width');
+        const card = document.getElementById('card');
+
+        const updateWidth = () => {
+            card.style.setProperty('width', `${input.value}px`);
+        };
+
+        updateWidth();
+
+        input.addEventListener('input', updateWidth)
+    </script> -->
 </body>
 </html>
